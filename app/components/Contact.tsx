@@ -1,80 +1,18 @@
-
-import Image from 'next/image';
-
 const ContactSection = () => {
   return (
-    <section className="bg-black text-white py-16">
-      <div className='text-center text-2xl md:text-4xl uppercase mb-6'>
-        <p className="inline-block border-b-2 border-white pb-1">Contact</p>
-      </div>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl">
-        {/* Left Column: Text and Image */}
-        <div>
-          <h2 className="text-lg md:text-xl uppercase mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur at mollitia autem, corrupti quo incidunt.</h2>
-          <p className="mb-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias libero inventore corrupti excepturi ea, quaerat vero quidem odio alias iusto!
-          </p>
-          <div>
-            <Image
-              src="/assets/test01/01.png"
-              alt="Bread Basket"
-              width={500}
-              height={300}
-              className="w-full h-auto rounded-md shadow-lg"
-            />
-          </div>
-        </div>
+    <section>
+  {/* (Google Map) */}
+  <div className="relative flex flex-col justify-center w-full h-[300px] sm:h-[400px] lg:h-[500px] p-0 m-0">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7102272392267!2d100.54268237689438!3d13.735985586654301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ed8c5fd0c4b%3A0xe6d2dfc879b0851!2sEiffel%20Cafe%20(Sindhorn%20Building%20Branch)!5e0!3m2!1sth!2sth!4v1732185229312!5m2!1sth!2sth"
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="w-full h-full "
+    ></iframe>
+  </div>
+</section>
 
-        {/* Right Column: Form */}
-        <div>
-          <form className="p-6">
-            <div className="mb-6">
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                className="w-full bg-transparent border-b border-gray-500 py-2 focus:outline-none focus:border-white"
-              />
-            </div>
-
-            <div className="mb-6">
-              <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                Phone Number
-              </label>
-              <input
-                type="text"
-                id="phone"
-                placeholder="Enter your phone number"
-                className="w-full bg-transparent border-b border-gray-500 py-2 focus:outline-none focus:border-white"
-              />
-            </div>
-
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                className="w-full bg-transparent border-b border-gray-500 py-2 focus:outline-none focus:border-white"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-3 bg-gray-700 text-white font-bold uppercase rounded-lg hover:bg-gray-600 transition"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
   );
 };
-
 export default ContactSection;

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const News = () => {
   const NewFeel = [
     {
@@ -11,7 +13,7 @@ const News = () => {
     {
       id: 2,
       Image: "/assets/Christmas/Ras.jpg",
-      name: "Raspberry cream White Choc croissant ",
+      name: "Raspberry cream White Choc croissant",
       description1: "145 Baht net",
       description2:
         "Bright red Santa croissants with a cute fondant belt like Santa's belly. The filling is a soft and smooth white chocolate creamer, cut with a sour taste from raspberry jam. Perfectly balanced. 🎁",
@@ -35,46 +37,44 @@ const News = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#1F1F1F]">
-      <div className="container mx-auto px-4">
+    <section className="py-8 sm:py-12 md:py-16 bg-[#1F1F1F]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         {/* Title */}
-        <div className="text-center mb-12">
-          {/* Main Title */}
-          <h2 className="text-4xl font-extrabold text-white tracking-wide mb-4">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-wide mb-2 sm:mb-4">
             News
           </h2>
-
-          {/* Subtitle */}
-          <p className="text-base lg:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto px-4 sm:px-0">
             Cafe Eiffel offers authentic French bakery and pastry made with premium ingredients.
             Freshly baked from the oven every day.
           </p>
         </div>
 
         {/* News Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {NewFeel.map((item) => (
             <div
               key={item.id}
-              className="bg-[#292929] text-center rounded-lg overflow-hidden 
-          transition-transform transform hover:scale-105 duration-300 ease-in-out"
+              className="bg-[#292929] rounded-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 ease-in-out shadow-lg"
             >
-              {/* Image */}
-              <img
-                src={item.Image}
-                alt={item.name}
-                className="w-[100%] h-[50%] object-cover"
-              />
+              {/* Image Container with Fixed Aspect Ratio */}
+              <div className="relative w-full aspect-[2/2] overflow-hidden">
+                <img
+                  src={item.Image}
+                  alt={item.name}
+                  className="absolute inset-0 w-full h-full object-cover rounded-t-lg"
+                />
+              </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-lg lg:text-xl font-semibold text-white mb-2">
+              <div className="p-4 sm:p-5 md:p-6">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-1 sm:mb-2 line-clamp-2">
                   {item.name}
                 </h3>
-                <p className="text-sm lg:text-base text-gray-400 mb-1">
+                <p className="text-xs sm:text-sm text-gray-400 mb-1">
                   {item.description1}
                 </p>
-                <p className="text-sm lg:text-base text-gray-400">
+                <p className="text-xs sm:text-sm text-gray-400 line-clamp-3">
                   {item.description2}
                 </p>
               </div>
@@ -83,7 +83,6 @@ const News = () => {
         </div>
       </div>
     </section>
-
   );
 };
 
