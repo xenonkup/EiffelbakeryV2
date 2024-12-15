@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -52,16 +53,7 @@ const Hero = () => {
         </button>
       </div>
 
-      {/* Rolling Pin - Positioned in front of content */}
-      <div className="absolute left-1/2 bottom-[-10vh] sm:bottom-[-20vh] md:bottom-[-20vh] lg:bottom-[-30vh] w-[180%] sm:w-[160%] md:w-[140%] lg:w-[120%] transform -translate-x-1/2 z-30">
-        <img
-          src="/assets/Home/1.png"
-          alt="Rolling Pin"
-          className="opacity-90 w-full object-contain"
-        />
-      </div>
     </section>
   );
 };
-
 export default Hero;

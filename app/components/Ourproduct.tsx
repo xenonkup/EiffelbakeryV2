@@ -106,8 +106,6 @@ const Ourproduct = () => {
               we strive to create memorable dining experiences for our customers.
             </p>
             </h2>
-            
-
 
             {/* Product Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">

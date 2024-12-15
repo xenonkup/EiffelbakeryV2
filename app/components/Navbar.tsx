@@ -90,8 +90,8 @@ const Navbar = () => {
 
           {/* Mobile Sliding Menu */}
           <div
-            className={`fixed top-0 left-0 bg-white z-10 w-2/3 h-full transition-transform transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
-              } shadow-lg ease-in-out duration-300`}
+            className={`fixed top-0 left-0 bg-white z-10 h-full transition-transform transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"} shadow-lg ease-in-out duration-300
+            w-2/3 sm:w-3/4 md:w-1/2 lg:w-1/3`}
           >
             {/* Close Button */}
             <div className="flex justify-between items-center p-6 border-b">
