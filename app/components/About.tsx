@@ -5,17 +5,15 @@ import 'swiper/css';
 const About = () => {
   return (
     <>
-      {/* Rolling Pin - Positioned in front of content */}
-      {/* <div className="absolute left-1/2 bottom-[-12vh] sm:bottom-[-20vh] md:bottom-[-20vh] lg:bottom-[-35vh] w-[180%] sm:w-[160%] md:w-[140%] lg:w-[120%] transform -translate-x-1/2 z-50">
-        <Image
-          src="/assets/Home/1.png"
-          alt="Rolling Pin"
-          width={600}
-          height={600}
-          className="opacity-90 w-full object-contain"
-        />
-      </div> */}
-      
+    {/* Rolling Pin */}
+    {/* <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-10vh] sm:bottom-[-15vh] md:bottom-[-20vh] lg:bottom-[-24vh] w-[180%] sm:w-[160%] md:w-[140%] lg:w-[120%] z-30">
+        <img
+            src="/assets/Home/1.png"
+            alt="Rolling Pin"
+            className="opacity-90 w-full object-contain"
+          />
+        </div> */}
+
       <section className="relative py-16 sm:py-24 lg:py-32 h-auto flex items-center">
         <div className="relative max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">

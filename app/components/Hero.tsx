@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -22,38 +21,41 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative bg-black text-white h-screen flex items-center overflow-hidden">
-      {/* Background Images */}
-      <div className="absolute inset-0 w-full h-full">
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Hero Background ${index + 1}`}
-            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-              currentIndex === index ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
-        ))}
-      </div>
+    <>
+      <section className="relative bg-black text-white h-screen flex items-center overflow-hidden">
+        {/* Background Images */}
+        <div className="absolute inset-0 w-full h-full">
+          {images.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Hero Background ${index + 1}`}
+              className={`absolute w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'
+                }`}
+            />
+          ))}
+        </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 z-[5]"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50 z-20"></div>
 
-      {/* Content */}
-      <div className="relative z-20 w-full px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center md:items-start text-center md:text-left space-y-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight drop-shadow-lg">
-          Eiffel Bakery & Cafe
-        </h1>
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl text-white/90 leading-relaxed mb-6 drop-shadow-md">
-          Artisanal Breads & Specialty Coffee crafted with love and care, for moments worth savoring.
-        </p>
-        <button className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-black rounded-full text-sm md:text-base hover:bg-gray-200 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl">
-          Explore Menu
-        </button>
-      </div>
+        {/* Content */}
+        <div className="relative z-20 w-full px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center md:items-start text-center md:text-left space-y-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight drop-shadow-lg">
+            Eiffel Bakery & Cafe
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl text-white/90 leading-relaxed mb-6 drop-shadow-md">
+            Artisanal Breads & Specialty Coffee crafted with love and care, for moments worth savoring.
+          </p>
+          <button className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-black rounded-full text-sm md:text-base hover:bg-gray-200 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl">
+            Explore Menu
+          </button>
+        </div>
 
-    </section>
+      </section>
+
+    </>
   );
 };
+
 export default Hero;
