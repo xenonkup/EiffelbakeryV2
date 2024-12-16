@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import Image from "next/image";
 
 const Ourproduct = () => {
   const [value, setValue] = useState(0);
@@ -38,24 +39,6 @@ const Ourproduct = () => {
 
     initFancybox();
   }, [value]);
-
-  const product = [
-    {
-      id: 1,
-      Image: "/assets/BRADE/BREAD 2.jpg",
-      name: "EIFFEL BRADE",
-    },
-    {
-      id: 2,
-      Image: "/assets/CAKE/cake1.jpg",
-      name: "EIFFEL CAKE",
-    },
-    {
-      id: 3,
-      Image: "/assets/ORGANIC/ORGANIC2.jpg",
-      name: "ORGANIC BEVERAGES",
-    },
-  ];
 
   const icons = [
     {
@@ -98,50 +81,48 @@ const Ourproduct = () => {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            {/* Header */}
-            <h2 className="text-black text-3xl font-bold mb-10 text-left">
+            <h2 className="text-black text-4xl font-extrabold mb-6 text-left">
               Product
-              <p className="text-sm  sm:text-base font-normal mt-5">
-              Cafe Eiffel is a French-inspired bakery and café offering high-quality food and beverages. With warm hospitality and a cozy ambiance,
-              we strive to create memorable dining experiences for our customers.
-            </p>
             </h2>
+            <p className="text-black text-base sm:text-lg leading-relaxed sm:leading-loose max-w-3xl">
+              Cafe Eiffel is a French-inspired bakery and café offering high-quality food and beverages.
+              With warm hospitality and a cozy ambiance, we strive to create memorable dining experiences
+              for our customers.
+            </p>
+            <div className="border-t border-gray-300 mt-6 w-24"></div>
 
-            {/* Product Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">
-              {product.map((item) => (
-                <div key={item.id} className="text-center">
-                  {/* Image Box */}
-                  <a
-                    href={item.Image}
-                    data-fancybox="gallery"
-                    data-caption={item.name}
-                    className="block"
-                  >
-                    <div className="overflow-hidden rounded-lg shadow-lg mb-4">
-                      <img
-                        src={item.Image}
-                        alt={item.name}
-                        className="w-full h-[300px] object-cover transition-transform duration-300 hover:scale-110"
-                      />
-                    </div>
-                  </a>
-                  {/* Name and Description */}
-                  <h3 className="text-lg font-semibold text-black">
-                    {item.name}
-                  </h3>
+
+            <section className="grid grid-cols-3 md:grid-cols-3 gap-4">
+              {[
+                ["/assets/OurGallery/Cr01.jpg", "/assets/OurGallery/ORGANIC8.jpg", "/assets/OurGallery/LEMON-TART.jpg"],
+                ["/assets/OurGallery/cake7.jpg", "/assets/OurGallery/ORGANIC14.jpg", "/assets/OurGallery/cake3.jpg"],
+                ["/assets/OurGallery/Mille-feuille.jpg", "/assets/OurGallery/ORGANIC7.jpg", "/assets/OurGallery/cake8.jpg"],
+              ].map((column, i) => (
+                <div key={i} className="grid gap-4">
+                  {column.map((src, idx) => (
+                    <Image
+                      key={idx}
+                      className="h-full w-full object-cover transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+                      src={src}
+                      alt={`Image ${i}-${idx}`}
+                      width={500}
+                      height={500}
+                    />
+                  ))}
                 </div>
               ))}
-            </div>
+            </section>
           </div>
         </div>
       </section>
 
       {/* Full Menu Image Section */}
       <section className="w-full h-full">
-        <img
+        <Image
           src="/assets/Product/MenuAll.jpg"
           alt="Eiffel"
+          width={2000}
+          height={2000}
           className="w-full h-auto object-contain"
         />
       </section>
@@ -161,9 +142,11 @@ const Ourproduct = () => {
                   key={icon.id}
                   className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                 >
-                  <img
+                  <Image
                     src={icon.src}
                     alt={icon.alt}
+                    width={600}
+                    height={600}
                     className="w-24 h-24 object-contain mb-4"
                   />
                   <h3 className="text-lg font-semibold mb-2">
@@ -180,6 +163,4 @@ const Ourproduct = () => {
       </section>
     </>
   );
-};
-
-export default Ourproduct;
+}; export default Ourproduct;

@@ -57,18 +57,18 @@ const Navbar = () => {
     } else {
       document.body.style.overflow = "auto"; // Re-enable scrolling
     }
-  
+
     return () => {
       document.body.style.overflow = "auto"; // Ensure scrolling is enabled when the component unmounts
     };
   }, [isMenuOpen]);
-  
+
 
 
   return (
     <div>
       <nav
-        className={`fixed top-0 left-0 w-full z-30 p-4 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 left-0 w-full z-30 px-4 py-5 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
           } ${isScrolled ? "bg-white/80 backdrop-blur-md shadow text-black" : "bg-transparent text-white"
           }`}
       >
@@ -106,7 +106,7 @@ const Navbar = () => {
             transform transition-transform duration-500 ease-in-out
             ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
             w-[75%] max-w-sm overflow-hidden`}
-              >
+          >
 
             {/* Close Button */}
             <div className="flex justify-between items-center p-6 border-b">
