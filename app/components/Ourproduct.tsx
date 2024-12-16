@@ -58,14 +58,6 @@ const Ourproduct = () => {
         "Only the best ingredients and strict quality control allow us to deliver outstanding results.",
     },
     {
-      id: 3,
-      src: "/assets/Education/Book001.png",
-      alt: "Education",
-      title: "Education",
-      description:
-        "We provide educational materials and training for anyone interested in learning our craft.",
-    },
-    {
       id: 4,
       src: "/assets/Presentaion/Presentaion01.png",
       alt: "Presentation",
@@ -78,7 +70,7 @@ const Ourproduct = () => {
   return (
     <>
       {/* Product Section */}
-      <section className="py-12 bg-white">
+      <section id="Our Products" className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-black text-4xl font-extrabold mb-6 text-left">
@@ -116,17 +108,6 @@ const Ourproduct = () => {
         </div>
       </section>
 
-      {/* Full Menu Image Section */}
-      <section className="w-full h-full">
-        <Image
-          src="/assets/Product/MenuAll.jpg"
-          alt="Eiffel"
-          width={2000}
-          height={2000}
-          className="w-full h-auto object-contain"
-        />
-      </section>
-
       {/* Why Trust Us Section */}
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
@@ -136,7 +117,7 @@ const Ourproduct = () => {
               Eiffel Bakery combines expert craftsmanship with premium ingredients
               to create delicious and visually stunning baked goods.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8">
               {icons.map((icon) => (
                 <div
                   key={icon.id}

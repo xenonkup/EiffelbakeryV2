@@ -1,6 +1,6 @@
 const ContactSection = () => {
   return (
-    <section>
+  <section id="Contact">
   {/* (Google Map) */}
   <div className="relative flex flex-col justify-center w-full h-[300px] sm:h-[400px] lg:h-[500px] p-0 m-0">
     <iframe

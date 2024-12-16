@@ -14,17 +14,17 @@ const Hero = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // ฟังก์ชัน useEffect ที่ควบคุมการเปลี่ยนภาพ:
+  // Change image every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change every 6 seconds
+    }, 5000);
 
-    return () => clearInterval(interval); // ลบ interval เมื่อ component ถูก unmount
-  }, []);
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [images.length]);
 
   return (
-    <section className="relative bg-black opacity-100 text-white h-[85vh] md:h-[90vh] lg:h-[100vh] flex items-center">
+    <section id="Home" className="relative bg-black opacity-100 text-white h-[85vh] md:h-[90vh] lg:h-[100vh] flex items-center">
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full">
         {images.map((src, index) => (

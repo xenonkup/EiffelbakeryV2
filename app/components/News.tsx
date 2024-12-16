@@ -37,7 +37,7 @@ const News = () => {
   ];
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-[#1F1F1F]">
+    <section id="News" className="py-8 sm:py-12 md:py-16 bg-[#1F1F1F]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         {/* Title */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">

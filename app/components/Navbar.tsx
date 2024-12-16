@@ -7,17 +7,19 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "News", href: "#" },
-    { name: "Our Products", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Home", href: "#Home" },
+    { name: "About Us", href: "#About Us" },
+    { name: "News", href: "#News" },
+    { name: "Our Products", href: "#Our Products" },
+    { name: "Contact", href: "#Contact" },
   ];
 
+  // Toggle menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Scroll event handler
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
@@ -31,6 +33,7 @@ const Navbar = () => {
     setLastScrollY(currentScrollY);
   };
 
+  // Add event listener for scroll
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -38,19 +41,21 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsMenuOpen(false); // Close the menu when screen size is larger than the mobile breakpoint
       }
     };
-
+    /// Add event listener for window resize
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+  // open the menu on mobile
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden"; // Disable scrolling
@@ -63,18 +68,16 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
-
-
   return (
     <div>
       <nav
-        className={`fixed top-0 left-0 w-full z-30 px-4 py-5 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
-          } ${isScrolled ? "bg-white/80 backdrop-blur-md shadow text-black" : "bg-transparent text-white"
-          }`}
-      >
-        <div className="container mx-auto flex items-center justify-between py-4 max-w-7xl relative">
+        className={`fixed top-0 left-0 w-full z-30 px-4 py-4 transition-all duration-300
+        ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
+        ${isScrolled ? "bg-black text-white shadow-lg" : "bg-transparent text-white"}`}
+        >
+        <div>
           {/* Mobile Hamburger Button */}
-          <button className="md:hidden z-10" onClick={toggleMenu}>
+          <button className="md:hidden z-10 pt-2" onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 transition-colors duration-300"
@@ -92,20 +95,20 @@ const Navbar = () => {
           </button>
 
           {/* Mobile Logo */}
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <img
-              src="/assets/Logo/Eiffel.jpg"
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
+          <img
+              src="/assets/Logo/logow1.png"
               alt="Logo"
-              className="w-[100px] h-[100px] lg:w-[100px] lg:h-[100px] object-contain"
-            />
+              className="w-[60px] h-[60px] lg:w-[65px] lg:h-[65px] object-contain"
+              />
           </div>
 
           {/* Mobile Sliding Menu */}
           <div
-            className={`fixed top-0 left-0 h-screen bg-white z-50 shadow-xl flex flex-col
-            transform transition-transform duration-500 ease-in-out
-            ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
-            w-[75%] max-w-sm overflow-hidden`}
+            className={`fixed top-0 left-0 h-screen bg-white z-50 
+            shadow-xl flex flex-col transform transition-transform duration-500 
+            ease-in-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
+            w-[100%] max-w-sm overflow-hidden`}
           >
 
             {/* Close Button */}
@@ -172,11 +175,11 @@ const Navbar = () => {
             </ul>
 
             {/* Centered Logo */}
-            <div className="flex justify-center w-[200px]">
-              <img
-                src="/assets/Logo/Eiffel.jpg"
+            <div className="flex justify-center w-[200px] pt-2 ">
+            <img
+                src="/assets/Logo/logow1.png"
                 alt="Logo"
-                className="w-[100px] h-[100px] object-contain"
+                className="w-[60px] h-[60px] lg:w-[65px] lg:h-[65px] object-contain absolute top-0"
               />
             </div>
 
