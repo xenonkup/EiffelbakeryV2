@@ -68,13 +68,14 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+
   return (
     <div>
       <nav
         className={`fixed top-0 left-0 w-full z-30 px-4 py-4 transition-all duration-300
         ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
         ${isScrolled ? "bg-black text-white shadow-lg" : "bg-transparent text-white"}`}
-        >
+      >
         <div>
           {/* Mobile Hamburger Button */}
           <button className="md:hidden z-10 pt-2" onClick={toggleMenu}>
@@ -95,13 +96,15 @@ const Navbar = () => {
           </button>
 
           {/* Mobile Logo */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
-          <img
+          <div id="Home" className="absolute top-0 left-1/2 transform -translate-x-1/2 md:hidden pt-1">
+            <a href=""></a>
+            <img
               src="/assets/Logo/logow1.png"
-              alt="Logo"
-              className="w-[60px] h-[60px] lg:w-[65px] lg:h-[65px] object-contain"
-              />
+              alt="Mobile Logo"
+              className="w-[50px] h-[50px] object-contain"
+            />
           </div>
+
 
           {/* Mobile Sliding Menu */}
           <div
@@ -157,44 +160,50 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex w-full items-center">
+
             {/* Left Navigation */}
             <ul className="flex flex-1 justify-end space-x-6 uppercase tracking-wide">
               {navItems.slice(0, 3).map((item) => (
                 <li
                   key={item.name}
-                  className="text-base lg:text-xl xl:text-2xl transition-colors duration-300"
+                  className="relative text-xs lg:text-sm xl:text-base transition-all duration-300"
                 >
                   <a
                     href={item.href}
-                    className="hover:text-gray-500 rounded-xl px-2 py-1"
+                    className="inline-block px-2 py-1 transform transition-transform duration-300 hover:-translate-y-1 hover:text-gray-500"
                   >
                     {item.name}
+                    {/* เส้นใต้ */}
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-500 transition-all duration-300 hover:w-full"></span>
                   </a>
                 </li>
               ))}
             </ul>
 
-            {/* Centered Logo */}
-            <div className="flex justify-center w-[200px] pt-2 ">
-            <img
+            {/* Desktop Logo */}
+            <div id="Home" className="hidden md:flex justify-center w-[200px] pt-1">
+             <img
                 src="/assets/Logo/logow1.png"
-                alt="Logo"
-                className="w-[60px] h-[60px] lg:w-[65px] lg:h-[65px] object-contain absolute top-0"
+                alt="Desktop Logo"
+                className="w-[60px] h-[60px] lg:w-[50px] lg:h-[50px] object-contain"
               />
             </div>
+
 
             {/* Right Navigation */}
             <ul className="flex flex-1 justify-start space-x-6 uppercase tracking-wide">
               {navItems.slice(3).map((item) => (
                 <li
                   key={item.name}
-                  className="text-base lg:text-xl xl:text-2xl transition-colors duration-300"
+                  className="relative text-xs lg:text-sm xl:text-base transition-all duration-300"
                 >
                   <a
                     href={item.href}
-                    className="hover:text-gray-500 rounded-xl px-2 py-1"
+                    className="inline-block px-2 py-1 transform transition-transform duration-300 hover:-translate-y-1 hover:text-gray-500"
                   >
                     {item.name}
+                    {/* เส้นใต้ */}
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-500 transition-all duration-300 hover:w-full"></span>
                   </a>
                 </li>
               ))}

@@ -3,7 +3,7 @@ import Image from 'next/image';
 const About = () => {
   return (
     <>
-      <section className="relative py-16 sm:py-24 lg:py-32 h-auto flex items-center">
+      <section id="About Us" className="relative py-16 sm:py-24 lg:py-32 h-auto flex items-center">
         <div className="relative max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8 items-center justify-center">
             {/* Left Section */}
