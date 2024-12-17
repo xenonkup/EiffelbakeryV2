@@ -21,10 +21,10 @@ const Page = () => {
       <Navbar />
       <Hero />
       <About />
-      {/* <News /> */}
-      {/* <Ourproduct /> */}
-      {/* <Contact /> */}
-      {/* <Footer/> */}
+      <News />
+      <Ourproduct />
+      <Contact />
+      <Footer/>
     </div>
   );
 };

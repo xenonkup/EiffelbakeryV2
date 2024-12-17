@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
           <p className="sm:inline-block">More channels to contact us</p>
           <div className="flex gap-3 justify-center sm:justify-start">
-            <a href="https://www.facebook.com/EiffelBakery?locale=th_TH" className="hover:text-blue-400">
+            <a href="https://www.facebook.com/EiffelBakery?locale=th_TH" target="_blank">
               <FaFacebook size={24} />
             </a>
-            <a href="https://www.instagram.com/cafeeiffel_bakery" className="hover:text-blue-400">
+            <a href="https://www.instagram.com/cafeeiffel_bakery" target="_blank">
               <FaInstagram size={24} />
             </a>
-            <a href="https://page.line.me/yly8794k?oat_referrer=PROFILE&openQrModal=true" className="hover:text-blue-400">
+            <a href="https://page.line.me/yly8794k?oat_referrer=PROFILE&openQrModal=true" target="_blank">
               <FaLine size={24} />
             </a>
           </div>

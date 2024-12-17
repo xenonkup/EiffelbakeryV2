@@ -72,9 +72,9 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed top-0 left-0 w-full z-30 px-4 py-4 transition-all duration-300
+        className={`fixed top-0 left-0 w-full z-50 p-3 transition-all duration-300
         ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
-        ${isScrolled ? "bg-black text-white shadow-lg" : "bg-transparent text-white"}`}
+        ${isScrolled ? "bg-black/70 text-white shadow-lg" : "bg-transparent text-white"}`}
       >
         <div>
           {/* Mobile Hamburger Button */}
@@ -181,7 +181,7 @@ const Navbar = () => {
             </ul>
 
             {/* Desktop Logo */}
-            <div id="Home" className="hidden md:flex justify-center w-[200px] pt-1">
+            <div id="Home" className="hidden md:flex justify-center w-[200px] pt-1 pb-1">
              <img
                 src="/assets/Logo/logow1.png"
                 alt="Desktop Logo"

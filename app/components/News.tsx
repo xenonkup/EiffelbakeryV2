@@ -37,8 +37,8 @@ const News = () => {
   ];
 
   return (
-    <section id="News" className="py-8 sm:py-12 md:py-16 bg-[#1F1F1F]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+    <section id="News">
+      <div className="py-8 sm:py-12 md:py-16 bg-[#181919]">
         {/* Title */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-wide mb-2 sm:mb-4">
@@ -51,35 +51,38 @@ const News = () => {
         </div>
 
         {/* News Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {NewFeel.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#292929] rounded-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 ease-in-out shadow-lg"
-            >
-              {/* Image Container with Fixed Aspect Ratio */}
-              <div className="relative w-full aspect-[2/2] overflow-hidden">
-                <img
-                  src={item.Image}
-                  alt={item.name}
-                  className="absolute inset-0 w-full h-full object-cover rounded-t-lg"
-                />
-              </div>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 md:gap-4">
+            {NewFeel.map((item) => (
+              <div
+                key={item.id}
+                className="bg-[#292929] rounded-lg overflow-hidden transition-transform transform hover:scale-105 
+               duration-300 ease-in-out shadow-md w-[250px] h-[500px] flex flex-col mx-auto" // ใช้ mx-auto เพื่อให้การ์ดอยู่กึ่งกลาง
+              >
+                {/* Image Container with Fixed Width and Height */}
+                <div className="relative w-full h-[300px] overflow-hidden">
+                  <img
+                    src={item.Image}
+                    alt={item.name}
+                    className="absolute inset-0 w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
 
-              {/* Content */}
-              <div className="p-4 sm:p-5 md:p-6">
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-1 sm:mb-2 line-clamp-2">
-                  {item.name}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-400 mb-1">
-                  {item.description1}
-                </p>
-                <p className="text-xs sm:text-sm text-gray-400 line-clamp-3">
-                  {item.description2}
-                </p>
+                {/* Content Container */}
+                <div className="flex flex-col p-4">
+                  <h3 className="text-center text-sm sm:text-base md:text-lg font-semibold text-white mb-1 sm:mb-2 line-clamp-2">
+                    {item.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-400 mb-1 line-clamp-1">
+                    {item.description1}
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-400 mb-2 flex-grow line-clamp-3 overflow-hidden">
+                    {item.description2}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
