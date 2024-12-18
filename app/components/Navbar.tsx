@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -7,7 +8,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#Home" },
+    { name: "Home", href: "#Homes" },
     { name: "About Us", href: "#About Us" },
     { name: "News", href: "#News" },
     { name: "Our Products", href: "#Our Products" },
@@ -97,12 +98,15 @@ const Navbar = () => {
 
           {/* Mobile Logo */}
           <div id="Home" className="absolute top-0 left-1/2 transform -translate-x-1/2 md:hidden pt-1">
-            <a href=""></a>
-            <img
+            <a href="#Homes">
+            <Image
               src="/assets/Logo/logow1.png"
               alt="Mobile Logo"
+              width={1000}
+              height={1000}
               className="w-[50px] h-[50px] object-contain"
             />
+            </a>
           </div>
 
 
@@ -111,7 +115,7 @@ const Navbar = () => {
             className={`fixed top-0 left-0 h-screen bg-white z-50 
             shadow-xl flex flex-col transform transition-transform duration-500 
             ease-in-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
-            w-[100%] max-w-sm overflow-hidden`}
+            w-[70%] max-w-sm overflow-hidden`}
           >
 
             {/* Close Button */}
@@ -148,7 +152,8 @@ const Navbar = () => {
                 <li key={item.name} className="mb-4">
                   <a
                     href={item.href}
-                    className="block text-left text-lg font-medium text-black uppercase rounded-lg hover:bg-black/50 hover:text-white transition-all duration-300 px-4 py-2 w-full"
+                    className="block text-left text-lg font-medium text-black uppercase rounded-lg hover:bg-black/50
+                    hover:text-white transition-all duration-300 px-4 py-2 w-full"
                     onClick={toggleMenu}
                   >
                     {item.name}
@@ -181,12 +186,16 @@ const Navbar = () => {
             </ul>
 
             {/* Desktop Logo */}
-            <div id="Home" className="hidden md:flex justify-center w-[200px] pt-1 pb-1">
-             <img
+            <div className="hidden md:flex justify-center w-[200px] pt-1 pb-1">
+              <a href="#Homes">
+             <Image
                 src="/assets/Logo/logow1.png"
                 alt="Desktop Logo"
+                width={1000}
+                height={1000}
                 className="w-[60px] h-[60px] lg:w-[50px] lg:h-[50px] object-contain"
               />
+              </a>
             </div>
 
 

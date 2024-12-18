@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <section
-      id="Home"
+      id="Homes"
       className="relative bg-black text-white h-[85vh] md:h-[90vh] lg:h-[100vh] flex items-center overflow-hidden"
     >
       {/* Background Image with Brightness Transition */}
@@ -57,7 +57,7 @@ const Hero = () => {
       <div
         className={`
           relative z-10 w-full px-6 sm:px-4 md:px-20
-          flex flex-col items-center md:items-start 
+          flex flex-col items-center md:item-center
           text-center md:text-left ml-10
           transition-all duration-[1500ms] ease-in-out
           ${isLoaded
