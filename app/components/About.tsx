@@ -3,19 +3,19 @@ import Image from 'next/image';
 const About = () => {
   return (
     <>
-      <section id="About Us" className="py-16 sm:py-18 lg:py-25 flex items-center justify-center">
+      <section id="About Us" className=" py-16 sm:py-18 lg:py-25 flex items-center justify-center">
         <div className="relative max-w-[1090px] px-4">
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
 
             {/* Left Section */}
             <div className="col-span-1 mt-4">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 text-center md:text-left">
+              <h2 className="text-black text-3xl sm:text-4xl font-bold mb-4 text-center md:text-left">
                 About Cafe
               </h2>
-              <p className="text-gray-700 mb-6 text-base sm:text-sm md:text-base text-center md:text-left">
+              <p className="text-black mb-6 text-base sm:text-sm md:text-base text-center md:text-left">
                 Eiffel Bakery & Cafe (SINTHORN TOWER) is a cozy café in the Sinthorn Building, Bangkok, offering freshly baked pastries, cakes, and premium coffee in a stylish atmosphere.
               </p>
-              <p className="text-gray-700 mb-6 text-base sm:text-sm md:text-base text-center md:text-left">
+              <p className="text-black mb-6 text-base sm:text-sm md:text-base text-center md:text-left">
                 Whether you're looking for a sweet treat or a refreshing beverage, we have something to satisfy every craving.
               </p>
             </div>

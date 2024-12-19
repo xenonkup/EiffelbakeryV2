@@ -123,7 +123,7 @@ const Ourproduct = () => {
      {/* Tab Menu */}
      <section className="py-6 md:py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+          <div className="flex flex-row justify-center gap-2 md:gap-4">
             {categories.map((category) => (
               <button
                 key={category.id}

@@ -1,52 +1,61 @@
-import React from "react";
+import React,{useState , useEffect} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import Image from "next/image";
-
+const NewFeel = [
+  {
+    id: 1,
+    image: "/assets/Christmas/Matcha.jpg",
+    name: "Matcha Coconut Raspberry X mas tree",
+    description1: "185 Baht net",
+    description2: "Indulge in the sweet and fragrant green tea white chocolate mousse that melts in your mouth 🍃 Hidden deliciousness with raspberry and cream cheese filling, topped with crispy pistachio cake, designed like a Christmas tree, guaranteed to be delicious and bright to welcome the festival! 💚",
+  },
+  {
+    id: 2,
+    image: "/assets/Christmas/Ras.jpg",
+    name: "Raspberry cream White Choc croissant",
+    description1: "145 Baht net",
+    description2: "Bright red Santa croissants with a cute fondant belt like Santa's belly. The filling is a soft and smooth white chocolate creamer, cut with a sour taste from raspberry jam. Perfectly balanced. 🎁",
+  },
+  {
+    id: 3,
+    image: "/assets/Christmas/Whitemalt.jpg",
+    name: "Whitemalt Choc Hazelnut Reindeer",
+    description1: "185 Baht net",
+    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+  },
+  {
+    id: 4,
+    image: "/assets/Christmas/Whitemalt.jpg",
+    name: "Whitemalt Choc Hazelnut Reindeer",
+    description1: "185 Baht net",
+    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+  },
+  {
+    id: 5,
+    image: "/assets/Christmas/Whitemalt.jpg",
+    name: "Whitemalt Choc Hazelnut Reindeer",
+    description1: "185 Baht net",
+    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+  },
+];
 const News = () => {
-  const NewFeel = [
-    {
-      id: 1,
-      image: "/assets/Christmas/Matcha.jpg",
-      name: "Matcha Coconut Raspberry X mas tree",
-      description1: "185 Baht net",
-      description2: "Indulge in the sweet and fragrant green tea white chocolate mousse that melts in your mouth 🍃 Hidden deliciousness with raspberry and cream cheese filling, topped with crispy pistachio cake, designed like a Christmas tree, guaranteed to be delicious and bright to welcome the festival! 💚",
-    },
-    {
-      id: 2,
-      image: "/assets/Christmas/Ras.jpg",
-      name: "Raspberry cream White Choc croissant",
-      description1: "145 Baht net",
-      description2: "Bright red Santa croissants with a cute fondant belt like Santa's belly. The filling is a soft and smooth white chocolate creamer, cut with a sour taste from raspberry jam. Perfectly balanced. 🎁",
-    },
-    {
-      id: 3,
-      image: "/assets/Christmas/Whitemalt.jpg",
-      name: "Whitemalt Choc Hazelnut Reindeer",
-      description1: "185 Baht net",
-      description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
-    },
-    {
-      id: 4,
-      image: "/assets/Christmas/Whitemalt.jpg",
-      name: "Whitemalt Choc Hazelnut Reindeer",
-      description1: "185 Baht net",
-      description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
-    },
-    {
-      id: 5,
-      image: "/assets/Christmas/Whitemalt.jpg",
-      name: "Whitemalt Choc Hazelnut Reindeer",
-      description1: "185 Baht net",
-      description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
-    },
-  ];
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timeOut);
+  }, []);
+
+  if(!isLoaded) return null
 
   return (
     <section id="News" className="bg-[#181919] py-8 md:py-12 lg:py-16">
-      <div className="container px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="container px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
         {/* Title Section */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-4">
@@ -61,39 +70,29 @@ const News = () => {
         {/* Swiper Section */}
         <div className="relative w-full px-2 md:px-4">
           <Swiper
-            modules={[Navigation]}
-            spaceBetween={16}
-            slidesPerView={1}
+            spaceBetween={10}
+            slidesPerView={4}
+            breakpoints={{
+              640: { slidesPerView: 1 }, // Small screens
+              768: { slidesPerView: 2 }, // Medium screens 
+              1024: { slidesPerView: 4 }, // Large screens 
+            }}
             navigation={{
               prevEl: ".custom-prev",
               nextEl: ".custom-next",
             }}
-            breakpoints={{
-              540: {
-                slidesPerView: 1.5,
-                spaceBetween: 16,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 24,
-              },
-            }}
+            modules={[Navigation]}
+           
+           
+           
             className="py-4"
           >
-            {NewFeel.map((item) => (
+            {NewFeel.length > 0 && NewFeel.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="bg-[#292929] rounded-lg overflow-hidden h-full flex flex-col shadow-lg">
+                 <div className="bg-[#292929] rounded-lg overflow-hidden h-full flex flex-col shadow-lg">
                   {/* Fixed Aspect Ratio Container */}
-                  <div className="w-full aspect-square overflow-hidden">
-                    <Image
+                  <div className="w-[300px] overflow-hidden">
+                    <img
                       src={item.image}
                       alt={item.name}
                       width={500}

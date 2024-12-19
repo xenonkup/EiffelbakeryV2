@@ -17,7 +17,7 @@ const roboto = Roboto({
 
 const Page = () => {
   return (
-    <div className={`${roboto.className}`}>
+    <div className={`${roboto.className} flex flex-col relative`}>
       <Navbar />
       <Hero />
       <About />
