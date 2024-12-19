@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mt-4 sm:mt-0">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mt-4 sm:mt-0 ">
           <p className="text-sm">Eiffel Bakery | Copyright © 2024 Siam Sindhorn Co., Ltd. All rights reserved.</p>
         </div>
         

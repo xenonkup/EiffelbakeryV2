@@ -6,6 +6,8 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#Homes" },
@@ -42,14 +44,13 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsMenuOpen(false); // Close the menu when screen size is larger than the mobile breakpoint
       }
     };
-    /// Add event listener for window resize
+    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -69,14 +70,28 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   return (
     <div>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 p-3 transition-all duration-300
+        className={`fixed top-0 left-0 w-full z-50 p-3 transition-all duration-300 
         ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
-        ${isScrolled ? "bg-black/70 text-white shadow-lg" : "bg-transparent text-white"}`}
-      >
+        ${isScrolled ? "bg-black/70 text-white shadow-lg" : "bg-transparent text-white"}
+        ${isLoaded && imageLoaded ? 'opacity-100' : 'opacity-80'}`}
+        onLoad={handleImageLoad}     
+        >
+          
         <div>
           {/* Mobile Hamburger Button */}
           <button className="md:hidden z-10 pt-2" onClick={toggleMenu}>
@@ -99,16 +114,16 @@ const Navbar = () => {
           {/* Mobile Logo */}
           <div id="Home" className="absolute top-0 left-1/2 transform -translate-x-1/2 md:hidden pt-1">
             <a href="#Homes">
-            <Image
-              src="/assets/Logo/logow1.png"
-              alt="Mobile Logo"
-              width={1000}
-              height={1000}
-              className="w-[50px] h-[50px] object-contain"
-            />
+              <Image
+                src="/assets/Logo/logow1.png"
+                alt="Mobile Logo"
+                width={1000}
+                height={1000}
+                className="w-[50px] h-[50px] object-contain"
+                onLoad={handleImageLoad}
+              />
             </a>
           </div>
-
 
           {/* Mobile Sliding Menu */}
           <div
@@ -171,7 +186,7 @@ const Navbar = () => {
               {navItems.slice(0, 3).map((item) => (
                 <li
                   key={item.name}
-                  className="relative text-xs lg:text-sm xl:text-base transition-all duration-300"
+                  className="relative text-xs lg:text-sm xl:text-base transition-all duration-300 hover:text-gray-500"
                 >
                   <a
                     href={item.href}
@@ -188,23 +203,23 @@ const Navbar = () => {
             {/* Desktop Logo */}
             <div className="hidden md:flex justify-center w-[200px] pt-1 pb-1">
               <a href="#Homes">
-             <Image
-                src="/assets/Logo/logow1.png"
-                alt="Desktop Logo"
-                width={1000}
-                height={1000}
-                className="w-[60px] h-[60px] lg:w-[50px] lg:h-[50px] object-contain"
-              />
+                <Image
+                  src="/assets/Logo/logow1.png"
+                  alt="Desktop Logo"
+                  width={1000}
+                  height={1000}
+                  className="w-[60px] h-[60px] lg:w-[50px] lg:h-[50px] object-contain"
+                  onLoad={handleImageLoad}
+                />
               </a>
             </div>
-
 
             {/* Right Navigation */}
             <ul className="flex flex-1 justify-start space-x-6 uppercase tracking-wide">
               {navItems.slice(3).map((item) => (
                 <li
                   key={item.name}
-                  className="relative text-xs lg:text-sm xl:text-base transition-all duration-300"
+                  className="relative text-xs lg:text-sm xl:text-base transition-all duration-300 hover:text-gray-500"
                 >
                   <a
                     href={item.href}
@@ -223,5 +238,4 @@ const Navbar = () => {
     </div>
   );
 };
-
 export default Navbar;

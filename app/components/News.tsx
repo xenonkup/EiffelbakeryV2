@@ -54,14 +54,14 @@ const News = () => {
   if(!isLoaded) return null
 
   return (
-    <section id="News" className="bg-[#181919] py-8 md:py-12 lg:py-16">
+    <section id="News" className="bg-[#171614] py-8 md:py-12 lg:py-16">
       <div className="container px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
         {/* Title Section */}
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-4">
+        <div className="text-center text-white mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4">
             News
           </h2>
-          <p className="text-sm md:text-base text-gray-300 max-w-2xl mx-auto px-4">
+          <p className="text-sm md:text-base max-w-2xl mx-auto px-4">
             Cafe Eiffel offers authentic French bakery and pastry made with premium ingredients.
             Freshly baked from the oven every day.
           </p>
@@ -73,28 +73,26 @@ const News = () => {
             spaceBetween={10}
             slidesPerView={4}
             breakpoints={{
-              640: { slidesPerView: 1 }, // Small screens
-              768: { slidesPerView: 2 }, // Medium screens 
-              1024: { slidesPerView: 4 }, // Large screens 
+              0: { slidesPerView: 1 }, // Extra small screens
+              640: { slidesPerView: 1 }, // Small screens (mobile)
+              768: { slidesPerView: 2 }, // Medium screens (tablet)
+              1024: { slidesPerView: 4 }, // Large screens (desktop)
             }}
             navigation={{
               prevEl: ".custom-prev",
               nextEl: ".custom-next",
             }}
             modules={[Navigation]}
-           
-           
-           
             className="py-4"
           >
             {NewFeel.length > 0 && NewFeel.map((item) => (
               <SwiperSlide key={item.id}>
                  <div className="bg-[#292929] rounded-lg overflow-hidden h-full flex flex-col shadow-lg">
                   {/* Fixed Aspect Ratio Container */}
-                  <div className="w-[300px] overflow-hidden">
+                  <div className="w-Full overflow-hidden">
                     <img
                       src={item.image}
-                      alt={item.name}
+                      alt={item.name} 
                       width={500}
                       height={500}
                       className="w-full h-full object-cover"
@@ -102,7 +100,7 @@ const News = () => {
                   </div>
 
                   {/* Content Container */}
-                  <div className="p-4 md:p-6 flex flex-col flex-grow">
+                  <div className="p-4 md:p-6 flex flex-col">
                     <h3 className="text-sm md:text-base font-semibold text-white mb-2 line-clamp-2 min-h-[2.5rem]">
                       {item.name}
                     </h3>
@@ -122,10 +120,10 @@ const News = () => {
           <div className="hidden lg:block">
             <button
               className="custom-prev absolute top-1/2 -left-12 transform -translate-y-1/2 z-10 
-                text-white hover:text-gray-400 transition-colors duration-300 focus:outline-none"
+                text-white transition-colors duration-300 focus:outline-none"
             >
               <svg
-                className="w-8 h-8"
+                className="w-16 h-16"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -140,10 +138,10 @@ const News = () => {
             </button>
             <button
               className="custom-next absolute top-1/2 -right-12 transform -translate-y-1/2 z-10 
-                text-white hover:text-gray-400 transition-colors duration-300 focus:outline-none"
+                text-white transition-colors duration-300 focus:outline-none"
             >
               <svg
-                className="w-8 h-8"
+                className="w-16 h-16"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

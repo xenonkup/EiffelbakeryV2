@@ -1,5 +1,8 @@
 'use client';
 
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -15,8 +18,16 @@ const roboto = Roboto({
   display: "swap",
 });
 
+
 const Page = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    })
+  }, [])
   return (
+
     <div className={`${roboto.className} flex flex-col relative`}>
       <Navbar />
       <Hero />

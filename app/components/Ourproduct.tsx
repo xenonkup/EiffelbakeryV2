@@ -86,111 +86,112 @@ const Ourproduct = () => {
 
   return (
     <>
-     <div className="min-h-screen bg-white">
-      {/* Product Section */}
-      <section id="Our Products" className="py-8 md:py-12 lg:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[1060px] mx-auto space-y-4">
-            <h2 className="text-black text-3xl md:text-4xl lg:text-5xl font-extrabold text-left">
-              Our Products
-            </h2>
-            <p className="text-black text-sm md:text-base lg:text-lg leading-relaxed">
-              Cafe Eiffel is a French-inspired bakery and café offering high-quality food and beverages.
-              With warm hospitality and a cozy ambiance, we strive to create memorable dining experiences
-              for our customers.
-            </p>
+      <div className="min-h-screen bg-white">
+        {/* Product Section */}
+        <section id="Our Products" className="py-8 md:py-12 lg:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1060px] mx-auto space-y-4">
+              <h2 className="text-black text-3xl md:text-4xl lg:text-5xl font-extrabold text-left">
+                Our Products
+              </h2>
+              <p className="text-black text-sm md:text-base lg:text-lg leading-relaxed">
+                Cafe Eiffel is a French-inspired bakery and café offering high-quality food and beverages.
+                With warm hospitality and a cozy ambiance, we strive to create memorable dining experiences
+                for our customers.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
 
-      {/* Hero Image Section */}
-      <section className="container mx-auto flex justify-center items-center py-6 px-4 min-h-[500px]">
-        <div
-          className={`w-full max-w-[1060px] h-[600px] transition-opacity duration-500 ease-in-out ${fade ? "opacity-100" : "opacity-0"
-            }`}
-        >
-          <Image
-            src={itemproduct[currentIndex].src}
-            alt={itemproduct[currentIndex].alt}
-            width={1200}
-            height={800}
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </div>
-      </section>
+        {/* Hero Image Section */}
+        <section className="container mx-auto flex justify-center items-center px-4 min-h-[300px] md:min-h-[500px] lg:min-h-[600px]">
+          <div
+            className={`w-full max-w-[1060px] h-[300px] md:h-[500px] lg:h-[600px] transition-opacity duration-500 ease-in-out ${fade ? "opacity-100" : "opacity-0"
+              }`}
+          >
+            <Image
+              src={itemproduct[currentIndex].src}
+              alt={itemproduct[currentIndex].alt}
+              width={1200}
+              height={800}
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </section>
 
-     {/* Tab Menu */}
-     <section className="py-6 md:py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-row justify-center gap-2 md:gap-4">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveTab(category.name)}
-                className={`px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium rounded-md transition-all duration-300 ${
-                  activeTab === category.name
+
+        {/* Tab Menu */}
+        <section className="py-6 md:py-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-row justify-center gap-2 md:gap-4">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveTab(category.name)}
+                  className={`px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium rounded-md transition-all duration-300 ${activeTab === category.name
                     ? "bg-black text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
+                    }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-       {/* Product Items */}
-       <section className="py-8 md:py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 lg:gap-6 max-w-[1060px] mx-auto">
-            {filteredItems.map((item) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
-              >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                />
+        {/* Product Items */}
+        <section className="py-8 md:py-12">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 lg:gap-6 max-w-[1060px] mx-auto">
+              {filteredItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+        {/* Download Menu Button */}
+        <section className="py-8 md:py-12">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+            <a
+              href="/assets/Product/Menu.jpg"
+              download="Menu"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 py-3 font-medium text-neutral-200 duration-500"
+            >
+              <div className="translate-y-0 opacity-100 transition group-hover:-translate-y-[150%] group-hover:opacity-0 text-sm md:text-base">
+                Download Menu
               </div>
-            ))}
+              <div className="absolute translate-y-[150%] opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 md:h-6 md:w-6"
+                >
+                  <path
+                    d="M7.5 2C7.77614 2 8 2.22386 8 2.5L8 11.2929L11.1464 8.14645C11.3417 7.95118 11.6583 7.95118 11.8536 8.14645C12.0488 8.34171 12.0488 8.65829 11.8536 8.85355L7.85355 12.8536C7.75979 12.9473 7.63261 13 7.5 13C7.36739 13 7.24021 12.9473 7.14645 12.8536L3.14645 8.85355C2.95118 8.65829 2.95118 8.34171 3.14645 8.14645C3.34171 7.95118 3.65829 7.95118 3.85355 8.14645L7 11.2929L7 2.5C7 2.22386 7.22386 2 7.5 2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </a>
           </div>
-        </div>
-      </section>
-
-       {/* Download Menu Button */}
-       <section className="py-8 md:py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-          <a
-            href="/assets/Product/Menu.jpg"
-            download="Menu"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 py-3 font-medium text-neutral-200 duration-500"
-          >
-            <div className="translate-y-0 opacity-100 transition group-hover:-translate-y-[150%] group-hover:opacity-0 text-sm md:text-base">
-              Download Menu
-            </div>
-            <div className="absolute translate-y-[150%] opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100">
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 md:h-6 md:w-6"
-              >
-                <path
-                  d="M7.5 2C7.77614 2 8 2.22386 8 2.5L8 11.2929L11.1464 8.14645C11.3417 7.95118 11.6583 7.95118 11.8536 8.14645C12.0488 8.34171 12.0488 8.65829 11.8536 8.85355L7.85355 12.8536C7.75979 12.9473 7.63261 13 7.5 13C7.36739 13 7.24021 12.9473 7.14645 12.8536L3.14645 8.85355C2.95118 8.65829 2.95118 8.34171 3.14645 8.14645C3.34171 7.95118 3.65829 7.95118 3.85355 8.14645L7 11.2929L7 2.5C7 2.22386 7.22386 2 7.5 2Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </a>
-        </div>
-      </section>
+        </section>
       </div>
     </>
   );
