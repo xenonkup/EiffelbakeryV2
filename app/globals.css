@@ -5,3 +5,14 @@
 html{
     scroll-behavior: smooth;
 }
+
+.swiper-button-next {
+    color: #fff !important;
+    font-size: 50%;
+    right: -20px; /* ค่าเริ่มต้น */
+}
+
+.swiper-button-prev {
+    color: #fff !important;
+    font-size: 50%;
+}

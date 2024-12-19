@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section
       id="Homes"
-      className="relative bg-black text-white min-h-screen flex items-center overflow-hidden"
+      className="relative bg-black text-white min-h-screen flex items-center overflow-hidden py-20 px-20 md:py-20 lg:py-20"
     >
       {/* Background Image with Brightness Transition */}
       <div

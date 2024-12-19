@@ -85,7 +85,7 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 p-3 transition-all duration-300 
+        className={`fixed top-0 left-0 w-full z-50 py-4 px-4 md:py-4 lg:py-4 transition-all duration-300 
         ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
         ${isScrolled ? "bg-black/70 text-white shadow-lg" : "bg-transparent text-white"}
         ${isLoaded && imageLoaded ? 'opacity-100' : 'opacity-80'}`}
@@ -112,7 +112,7 @@ const Navbar = () => {
           </button>
 
           {/* Mobile Logo */}
-          <div id="Home" className="absolute top-0 left-1/2 transform -translate-x-1/2 md:hidden pt-1">
+          <div id="Home" className="absolute top-0 left-1/2 transform -translate-x-1/2 md:hidden py-4 px-4 md:py-4 lg:py-4">
             <a href="#Homes">
               <Image
                 src="/assets/Logo/logow1.png"
@@ -162,7 +162,7 @@ const Navbar = () => {
             </div>
 
             {/* Menu Items */}
-            <ul className="flex flex-col pt-8 px-6">
+            <ul className="flex flex-col py-6 px-6 md:py-6 lg:py-6">
               {navItems.map((item) => (
                 <li key={item.name} className="mb-4">
                   <a
@@ -201,14 +201,14 @@ const Navbar = () => {
             </ul>
 
             {/* Desktop Logo */}
-            <div className="hidden md:flex justify-center w-[200px] pt-1 pb-1">
+            <div className="hidden md:flex justify-center w-[200px]">
               <a href="#Homes">
                 <Image
                   src="/assets/Logo/logow1.png"
                   alt="Desktop Logo"
                   width={1000}
                   height={1000}
-                  className="w-[60px] h-[60px] lg:w-[50px] lg:h-[50px] object-contain"
+                  className="w-[50px] h-[50px] object-contain"
                   onLoad={handleImageLoad}
                 />
               </a>

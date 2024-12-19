@@ -13,10 +13,9 @@ import Footer from "./components/Footer";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+  weight: '300',
+  subsets: ['latin'],
+})
 
 
 const Page = () => {
@@ -28,7 +27,7 @@ const Page = () => {
   }, [])
   return (
 
-    <div className={`${roboto.className} flex flex-col relative`}>
+    <div className={`${roboto.className}`}>
       <Navbar />
       <Hero />
       <About />

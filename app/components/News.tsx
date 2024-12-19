@@ -1,8 +1,9 @@
-import React,{useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+
 const NewFeel = [
   {
     id: 1,
@@ -39,22 +40,43 @@ const NewFeel = [
     description1: "185 Baht net",
     description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
   },
+  {
+    id: 6,
+    image: "/assets/Christmas/Whitemalt.jpg",
+    name: "Whitemalt Choc Hazelnut Reindeer",
+    description1: "185 Baht net",
+    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+  },
+  {
+    id: 7,
+    image: "/assets/Christmas/Whitemalt.jpg",
+    name: "Whitemalt Choc Hazelnut Reindeer",
+    description1: "185 Baht net",
+    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+  },
+  {
+    id: 8,
+    image: "/assets/Christmas/Whitemalt.jpg",
+    name: "Whitemalt Choc Hazelnut Reindeer",
+    description1: "185 Baht net",
+    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+  },
 ];
+
 const News = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timeOut = setTimeout(() => {
-      setIsLoaded(true);
-    }, 100);
+    // เริ่มใช้ fade-in ก่อน 0.10 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 10);
 
-    return () => clearTimeout(timeOut);
+    return () => clearTimeout(timer);
   }, []);
 
-  if(!isLoaded) return null
-
   return (
-    <section id="News" className="bg-[#171614] py-8 md:py-12 lg:py-16">
+    <section id="News" className={`bg-[#171614] py-8 md:py-12 lg:py-16 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="container px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
         {/* Title Section */}
         <div className="text-center text-white mb-8 md:mb-12">
@@ -73,10 +95,10 @@ const News = () => {
             spaceBetween={10}
             slidesPerView={4}
             breakpoints={{
-              0: { slidesPerView: 1 }, // Extra small screens
-              640: { slidesPerView: 1 }, // Small screens (mobile)
-              768: { slidesPerView: 2 }, // Medium screens (tablet)
-              1024: { slidesPerView: 4 }, // Large screens (desktop)
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
             }}
             navigation={{
               prevEl: ".custom-prev",
@@ -85,14 +107,14 @@ const News = () => {
             modules={[Navigation]}
             className="py-4"
           >
-            {NewFeel.length > 0 && NewFeel.map((item) => (
+            {NewFeel.map((item) => (
               <SwiperSlide key={item.id}>
-                 <div className="bg-[#292929] rounded-lg overflow-hidden h-full flex flex-col shadow-lg">
-                  {/* Fixed Aspect Ratio Container */}
-                  <div className="w-Full overflow-hidden">
+                <div className="bg-[#292929] rounded-lg overflow-hidden h-full flex flex-col shadow-lg">
+                  {/* Image Container */}
+                  <div className="relative w-full aspect-square">
                     <img
                       src={item.image}
-                      alt={item.name} 
+                      alt={item.name}
                       width={500}
                       height={500}
                       className="w-full h-full object-cover"
@@ -116,7 +138,7 @@ const News = () => {
             ))}
           </Swiper>
 
-          {/* Custom Navigation Buttons - Desktop Only */}
+          {/* Custom Navigation Buttons */}
           <div className="hidden lg:block">
             <button
               className="custom-prev absolute top-1/2 -left-12 transform -translate-y-1/2 z-10 
