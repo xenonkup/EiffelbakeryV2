@@ -8,6 +8,9 @@ const Ourproduct = () => {
     { id: 2, name: "EIFFEL COFFEE" },
     { id: 3, name: "ORGANIC BEVERAGES" },
     { id: 4, name: "EIFFEL CAKE" },
+    { id: 5, name: "WEEKEND MENU" },
+    { id: 6, name: "SEASON’S BAKERY" },
+    { id: 7, name: "OUR CAFÉ" },
   ];
 
   // Item Images
@@ -64,6 +67,44 @@ const Ourproduct = () => {
     { id: 47, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 47", Description47: "Description 47" },
     { id: 48, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 48", Description48: "Description 48" },
 
+    { id: 49, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 49", Description49: "Description 49" },
+    { id: 50, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 50", Description50: "Description 50" },
+    { id: 51, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 51", Description51: "Description 51" },
+    { id: 52, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 52", Description52: "Description 52" },
+    { id: 53, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 53", Description53: "Description 53" },
+    { id: 54, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 54", Description54: "Description 54" },
+    { id: 55, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 55", Description55: "Description 55" },
+    { id: 56, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 56", Description56: "Description 56" },
+    { id: 57, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 57", Description57: "Description 57" },
+    { id: 58, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 58", Description58: "Description 58" },
+    { id: 59, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 59", Description59: "Description 59" },
+    { id: 60, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 60", Description60: "Description 60" },
+
+    { id: 61, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 61", Description61: "Description 61" },
+    { id: 62, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 62", Description62: "Description 62" },
+    { id: 63, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 63", Description63: "Description 63" },
+    { id: 64, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 64", Description64: "Description 64" },
+    { id: 65, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 65", Description65: "Description 65" },
+    { id: 66, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 66", Description66: "Description 66" },
+    { id: 67, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 67", Description67: "Description 67" },
+    { id: 68, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 68", Description68: "Description 68" },
+    { id: 69, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 69", Description69: "Description 69" },
+    { id: 70, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 70", Description70: "Description 70" },
+    { id: 71, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 71", Description71: "Description 71" },
+    { id: 72, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 72", Description72: "Description 72" },
+
+    { id: 73, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 73", Description73: "Description 73" },
+    { id: 74, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 74", Description74: "Description 74" },
+    { id: 75, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 75", Description75: "Description 75" },
+    { id: 76, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 76", Description76: "Description 76" },
+    { id: 77, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 77", Description77: "Description 77" },
+    { id: 78, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 78", Description78: "Description 78" },
+    { id: 79, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 79", Description79: "Description 79" },
+    { id: 80, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 80", Description80: "Description 80" },
+    { id: 81, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 81", Description81: "Description 81" },
+    { id: 82, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 82", Description82: "Description 82" },
+    { id: 83, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 83", Description83: "Description 83" },
+    { id: 84, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 84", Description84: "Description 84" },
   ];
 
   const itemproduct = [
@@ -93,15 +134,15 @@ const Ourproduct = () => {
     return () => clearInterval(interval); // Cleanup on component unmount
   }, [itemproduct.length]);
 
-   // Handle tab change with fade effect
-   const handleTabChange = (tabName: React.SetStateAction<string>) => {
+  // Handle tab change with fade effect
+  const handleTabChange = (tabName: React.SetStateAction<string>) => {
     setIsVisible(false);
     setTimeout(() => {
       setActiveTab(tabName);
       setIsVisible(true);
     }, 400); // Duration of fade-out effect
   };
-  
+
   return (
     <>
       <main className="bg-white py-6 px-6 md:py-6 lg:py-6">
@@ -139,22 +180,34 @@ const Ourproduct = () => {
         </section>
 
         {/* Tab Menu */}
-        <section className="">
+        <section className="relative w-full">
           <div className="container mx-auto py-6">
-            <div className="flex flex-row justify-center gap-2 md:gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => handleTabChange(category.name)}
-                  className={`px-4 md:px-6 py-2 md:py-3 text-xs md:text-sm font-medium rounded-md transition-all duration-300 ${
-                    activeTab === category.name
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                  }`}
-                >
-                  {category.name}
-                </button>
-              ))}
+            <div className="px-4 md:px-6">
+              <div
+              // Use overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent
+                className="
+                flex flex-row gap-3 md:gap-3 overflow-x-auto 
+                whitespace-nowrap scroll-smooth pb-2
+                scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent
+                md:justify-center
+                "
+              >
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => handleTabChange(category.name)}
+                    className={`px-4 md:px-4 py-3 md:py-3 
+                      text-xs md:text-sm font-medium rounded-md
+                      transition-all duration-300 flex-shrink-0
+                      ${activeTab === category.name
+                        ? "bg-black text-white"
+                        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                      }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -163,9 +216,8 @@ const Ourproduct = () => {
         <section>
           <div className="container mx-auto">
             <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-4 max-w-[1090px] 
-            mx-auto transition-opacity duration-1000 ease-in-out ${
-              isVisible ? 'opacity-100' : 'opacity-0'
-            }`}>
+            mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
+              }`}>
               {filteredItems.map((item) => (
                 <div
                   key={item.id}
