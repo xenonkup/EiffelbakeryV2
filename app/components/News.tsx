@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 const NewFeel = [
   {
@@ -76,7 +77,7 @@ const News = () => {
   }, []);
 
   return (
-    <section id="News" className={`bg-[#171614] py-8 md:py-12 lg:py-16 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <section id="News" className={`bg-[#171614] py-12 px-12 md:py-12 lg:py-12 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="container px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
         {/* Title Section */}
         <div className="text-center text-white mb-8 md:mb-12">
@@ -112,7 +113,7 @@ const News = () => {
                 <div className="bg-[#292929] rounded-lg overflow-hidden h-full flex flex-col shadow-lg">
                   {/* Image Container */}
                   <div className="relative w-full aspect-square">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.name}
                       width={500}

@@ -104,7 +104,7 @@ const Ourproduct = () => {
   
   return (
     <>
-      <main className="bg-white py-20 px-20 md:py-20 lg:py-20">
+      <main className="bg-white py-12 px-12 md:py-12 lg:py-12">
         {/* Product Section */}
         <section id="Our Products">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,7 +139,7 @@ const Ourproduct = () => {
         </section>
 
         {/* Tab Menu */}
-        <section className="py-6 px-6 md:py-6 lg:py-6">
+        <section className="">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-row justify-center gap-2 md:gap-4">
               {categories.map((category) => (
@@ -161,7 +161,7 @@ const Ourproduct = () => {
 
         {/* Product Items */}
         <section>
-          <div className="container mx-auto py-6 px-6 md:py-6 lg:py-6">
+          <div className="container mx-auto pt-6">
             <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-4 max-w-[1060px] 
             mx-auto transition-opacity duration-1000 ease-in-out ${
               isVisible ? 'opacity-100' : 'opacity-0'
@@ -172,9 +172,11 @@ const Ourproduct = () => {
                   className="relative bg-white rounded-lg shadow-lg overflow-hidden group transition-opacity duration-500 ease-in-out"
                 >
                   <div className="aspect-w-1 aspect-h-1">
-                    <img
+                    <Image
                       src={item.src}
                       alt={item.Name}
+                      width={600}
+                      height={600}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
@@ -199,8 +201,8 @@ const Ourproduct = () => {
         </section>
 
         {/* Download Menu Button */}
-        <section className="py-6 px-6 md:py-6 lg:py-6">
-          <div className="container mx-auto py-6 px-6 md:py-6 lg:py-6 flex justify-center">
+        <section>
+          <div className="container mx-auto flex justify-center pt-6">
             <a
               href="/assets/Product/Menu.jpg"
               download="Menu"

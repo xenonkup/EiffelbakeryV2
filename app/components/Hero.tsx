@@ -57,12 +57,13 @@ const Hero = () => {
             ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
           `}
         >
+
           {/* Heading */}
           <h1
             className={`
               font-bold leading-tight
-              text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
-              mb-4 sm:mb-6
+              text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+              mb-4 sm:mb-5
               transition-all duration-[1500ms] delay-300 ease-in-out
             `}
           >
