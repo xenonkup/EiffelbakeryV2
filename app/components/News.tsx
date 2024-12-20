@@ -78,7 +78,7 @@ const News = () => {
 
   return (
     <section id="News" className={`bg-[#171614] py-12 px-12 md:py-12 lg:py-12 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <div className="container px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
+      <div className="container max-w-[1070px] mx-auto py-1 px-1 md:py-1 lg:py-1 ">
         {/* Title Section */}
         <div className="text-center text-white mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4">
@@ -91,7 +91,7 @@ const News = () => {
         </div>
 
         {/* Swiper Section */}
-        <div className="relative w-full px-2 md:px-4">
+        <div className="relative w-full ">
           <Swiper
             spaceBetween={10}
             slidesPerView={4}
@@ -99,7 +99,7 @@ const News = () => {
               0: { slidesPerView: 1 },
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1024: { slidesPerView: 4 },
+              1024: { slidesPerView: 3 },
             }}
             navigation={{
               prevEl: ".custom-prev",
@@ -142,7 +142,7 @@ const News = () => {
           {/* Custom Navigation Buttons */}
           <div className="hidden lg:block">
             <button
-              className="custom-prev absolute top-1/2 -left-12 transform -translate-y-1/2 z-10 
+              className="custom-prev absolute top-1/2 -left-16 transform -translate-y-1/2 z-10 
                 text-white transition-colors duration-300 focus:outline-none"
             >
               <svg
@@ -160,7 +160,7 @@ const News = () => {
               </svg>
             </button>
             <button
-              className="custom-next absolute top-1/2 -right-12 transform -translate-y-1/2 z-10 
+              className="custom-next absolute top-1/2 -right-16 transform -translate-y-1/2 z-10 
                 text-white transition-colors duration-300 focus:outline-none"
             >
               <svg

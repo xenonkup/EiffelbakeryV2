@@ -49,7 +49,7 @@ const Hero = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`
             flex flex-col items-center text-center
@@ -57,12 +57,12 @@ const Hero = () => {
             ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
           `}
         >
-
+          {/* Eiffel Bakery & Cafe */}
           {/* Heading */}
           <h1
             className={`
               font-bold leading-tight
-              text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+              text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl
               mb-4 sm:mb-5
               transition-all duration-[1500ms] delay-300 ease-in-out
             `}

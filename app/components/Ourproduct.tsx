@@ -107,12 +107,12 @@ const Ourproduct = () => {
       <main className="bg-white py-12 px-12 md:py-12 lg:py-12">
         {/* Product Section */}
         <section id="Our Products">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-[1060px] mx-auto space-y-4">
-              <h2 className="text-black text-3xl sm:text-4xl font-bold text-left">
+          <div className="container mx-auto">
+            <div className="max-w-[1060px] xl:max-w-[1070px] mx-auto ">
+              <h2 className="text-black text-3xl sm:text-4xl font-bold text-left mb-4 md:mb-4">
                 Our Products
               </h2>
-              <p className="text-black text-base sm:text-sm md:text-base leading-relaxed">
+              <p className="text-black text-base sm:text-sm md:text-base leading-relaxed mb-4 md:mb-4">
                 Cafe Eiffel is a French-inspired bakery and café offering high-quality food and beverages.
                 With warm hospitality and a cozy ambiance, we strive to create memorable dining experiences
                 for our customers.
@@ -123,7 +123,7 @@ const Ourproduct = () => {
 
 
         {/* Hero Image Section */}
-        <section className="container mx-auto py-6 px-6 md:py-6 lg:py-6 flex justify-center items-center min-h-[300px] md:min-h-[500px] lg:min-h-[600px]">
+        <section className="container mx-auto py-6 md:py-6 lg:py-6 flex justify-center items-center min-h-[300px] md:min-h-[500px] lg:min-h-[600px]">
           <div
             className={`w-full max-w-[1060px] h-[300px] md:h-[500px] lg:h-[600px] transition-opacity duration-500 ease-in-out ${fade ? "opacity-100" : "opacity-0"
               }`}
