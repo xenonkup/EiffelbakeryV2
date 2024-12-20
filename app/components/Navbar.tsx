@@ -165,7 +165,7 @@ const Navbar = () => {
                 <li key={item.name} className="mb-4">
                   <a
                     href={item.href}
-                    className="block text-left text-lg font-medium text-black uppercase rounded-lg hover:bg-black/50
+                    className="block text-left text-lg font-medium text-black uppercase rounded-lg hover:bg-black/90
                     hover:text-white transition-all duration-300 px-4 py-2 w-full"
                     onClick={toggleMenu}
                   >
@@ -176,7 +176,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Left Navigation */}
           <div className="hidden md:flex w-full items-center">
 
             {/* Left Navigation */}
