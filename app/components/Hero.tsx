@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section
       id="Homes"
-      className="relative bg-black text-white min-h-screen flex items-center overflow-hidden py-20 px-20 md:py-20 lg:py-20"
+      className="relative bg-black text-white min-h-screen flex items-center overflow-hidden py-6 px-6 md:py-6 lg:py-6"
     >
       {/* Background Image with Brightness Transition */}
       <div
@@ -49,7 +49,7 @@ const Hero = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full mx-[10px] px-4 sm:px-6 lg:px-8">
         <div
           className={`
             flex flex-col items-center text-center
@@ -62,7 +62,7 @@ const Hero = () => {
           <h1
             className={`
               font-bold leading-tight
-              text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl
+              text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
               mb-4 sm:mb-5
               transition-all duration-[1500ms] delay-300 ease-in-out
             `}

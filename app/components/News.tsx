@@ -77,10 +77,10 @@ const News = () => {
   }, []);
 
   return (
-    <section id="News" className={`bg-[#171614] py-12 px-12 md:py-12 lg:py-12 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <div className="container max-w-[1070px] mx-auto py-1 px-1 md:py-1 lg:py-1 ">
+    <section id="News" className={`bg-[#171614] py-6 px-6 md:py-6 lg:py-6 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="container max-w-[1100px] mx-auto py-1 px-1 md:py-1 lg:py-1 ">
         {/* Title Section */}
-        <div className="text-center text-white mb-8 md:mb-12">
+        <div className="text-center text-white mb-4 md:mb-8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4">
             News
           </h2>

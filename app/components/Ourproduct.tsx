@@ -104,11 +104,11 @@ const Ourproduct = () => {
   
   return (
     <>
-      <main className="bg-white py-12 px-12 md:py-12 lg:py-12">
+      <main className="bg-white py-6 px-6 md:py-6 lg:py-6">
         {/* Product Section */}
         <section id="Our Products">
           <div className="container mx-auto">
-            <div className="max-w-[1060px] xl:max-w-[1070px] mx-auto ">
+            <div className="max-w-[1060px] xl:max-w-[1090px] mx-auto ">
               <h2 className="text-black text-3xl sm:text-4xl font-bold text-left mb-4 md:mb-4">
                 Our Products
               </h2>
@@ -123,9 +123,9 @@ const Ourproduct = () => {
 
 
         {/* Hero Image Section */}
-        <section className="container mx-auto py-6 md:py-6 lg:py-6 flex justify-center items-center min-h-[300px] md:min-h-[500px] lg:min-h-[600px]">
+        <section className="container mx-auto flex justify-center items-center min-h-[300px] md:min-h-[500px] lg:min-h-[600px]">
           <div
-            className={`w-full max-w-[1060px] h-[300px] md:h-[500px] lg:h-[600px] transition-opacity duration-500 ease-in-out ${fade ? "opacity-100" : "opacity-0"
+            className={`w-full max-w-[1090px] h-[300px] md:h-[500px] lg:h-[600px] transition-opacity duration-500 ease-in-out ${fade ? "opacity-100" : "opacity-0"
               }`}
           >
             <Image
@@ -140,7 +140,7 @@ const Ourproduct = () => {
 
         {/* Tab Menu */}
         <section className="">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto py-6">
             <div className="flex flex-row justify-center gap-2 md:gap-4">
               {categories.map((category) => (
                 <button
@@ -161,8 +161,8 @@ const Ourproduct = () => {
 
         {/* Product Items */}
         <section>
-          <div className="container mx-auto pt-6">
-            <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-4 max-w-[1060px] 
+          <div className="container mx-auto">
+            <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-4 max-w-[1090px] 
             mx-auto transition-opacity duration-1000 ease-in-out ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}>

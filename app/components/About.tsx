@@ -3,9 +3,9 @@ import Image from 'next/image';
 const About = () => {
   return (
     <>
-      <section id="About Us" className="py-12 px-12 md:py-12 lg:py-12 flex items-center justify-center">
-        <div className="relative max-w-[1090px] px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+      <section id="About Us" className="py-6 px-6 md:py-6 lg:py-6 flex items-center justify-center">
+        <div className="relative max-w-[1090px]">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
 
             {/* Left Section */}
             <div className="col-span-1 mt-4">
@@ -21,7 +21,7 @@ const About = () => {
             </div>
 
             {/* Right Section */}
-            <div className="col-span-1 ">
+            <div>
               <div className="relative w-full h-full">
                 <Image
                   src="/assets/Ourcafe/cafe1.jpg"

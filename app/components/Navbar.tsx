@@ -85,16 +85,14 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 py-4 px-4 md:py-4 lg:py-4 transition-all duration-300 
+        className={`fixed top-0 left-0 w-full z-50 py-2 px-2 md:py-2 lg:py-2 transition-all duration-300 
         ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
         ${isScrolled ? "bg-black/70 text-white shadow-lg" : "bg-transparent text-white"}
         ${isLoaded && imageLoaded ? 'opacity-100' : 'opacity-80'}`}
-        onLoad={handleImageLoad}     
-        >
-          
+      >
         <div>
           {/* Mobile Hamburger Button */}
-          <button className="md:hidden z-10 pt-2" onClick={toggleMenu}>
+          <button className="md:hidden z-10 py-5 px-5 md:py-5 lg:py-5" onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 transition-colors duration-300"
@@ -112,14 +110,14 @@ const Navbar = () => {
           </button>
 
           {/* Mobile Logo */}
-          <div id="Home" className="absolute top-0 left-1/2 transform -translate-x-1/2 md:hidden py-4 px-4 md:py-4 lg:py-4">
+          <div id="Home" className="absolute top-1 left-1/2 transform -translate-x-1/2 md:hidden pt-1 ">
             <a href="#Homes">
               <Image
                 src="/assets/Logo/logow1.png"
                 alt="Mobile Logo"
                 width={1000}
                 height={1000}
-                className="w-[50px] h-[50px] object-contain"
+                className="w-[60px] h-[60px] object-contain"
                 onLoad={handleImageLoad}
               />
             </a>
@@ -208,7 +206,7 @@ const Navbar = () => {
                   alt="Desktop Logo"
                   width={1000}
                   height={1000}
-                  className="w-[50px] h-[50px] object-contain"
+                  className="w-[60px] h-[60px] object-contain"
                   onLoad={handleImageLoad}
                 />
               </a>

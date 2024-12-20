@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaLine } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black py-6">
+    <footer className="bg-white text-black p-6">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-4">
         
         {/* Left Section */}
@@ -21,11 +21,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mt-4 sm:mt-0 ">
+        {/* Right Section - Always Column */}
+        <div className="flex flex-col items-center sm:items-end gap-2">
           <p className="text-sm">Eiffel Bakery | Copyright © 2024 Siam Sindhorn Co., Ltd. All rights reserved.</p>
         </div>
-        
       </div>
     </footer>
   );
