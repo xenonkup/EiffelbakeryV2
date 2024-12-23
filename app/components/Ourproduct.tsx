@@ -6,107 +6,96 @@ const Ourproduct = () => {
   const categories = [
     { id: 1, name: "EIFFEL BREAD" },
     { id: 2, name: "EIFFEL COFFEE" },
-    { id: 3, name: "ORGANIC BEVERAGES" },
+    { id: 3, name: "ORGANIC BEBERAGES" },
     { id: 4, name: "EIFFEL CAKE" },
-    { id: 5, name: "WEEKEND MENU" },
+    // { id: 5, name: "WEEKEND MENU" },
     { id: 6, name: "SEASON’S BAKERY" },
     { id: 7, name: "OUR CAFÉ" },
   ];
 
   // Item Images
   const items = [
-    { id: 1, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 1", Description1: "Description 1" },
-    { id: 2, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 2", Description2: "Description 2" },
-    { id: 3, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 3", Description3: "Description 3" },
-    { id: 4, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 4", Description4: "Description 4" },
-    { id: 5, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 5", Description5: "Description 5" },
-    { id: 6, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 6", Description6: "Description 6" },
-    { id: 7, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 7", Description7: "Description 7" },
-    { id: 8, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 8", Description8: "Description 8" },
-    { id: 9, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 9", Description9: "Description 9" },
-    { id: 10, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 10", Description10: "Description 10" },
-    { id: 11, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 11", Description11: "Description 11" },
-    { id: 12, category: "EIFFEL BREAD", src: "/assets/TEST01/cr03.webp", Name: "Bread 12", Description12: "Description 12" },
+    { id: 1, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant truffle.jpg", Name: "Croissant truffle", Description1: " (120.-) Baht net" },
+    { id: 2, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant lemon meringue.jpg", Name: "Croissant lemon meringue", Description2: "(95.-) Baht net" },
+    { id: 3, category: "EIFFEL BREAD", src: "/assets/BRADE1/Pain suisse au choc chips.jpg", Name: "Pain suisse au choc chips.jpg", Description3: "(85.-) Baht net" },
+    { id: 4, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant chocolate lava.jpg", Name: "Croissant chocolate lava", Description4: "(95.-) Baht net" },
+    { id: 5, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant egg lava.jpg", Name: "Croissant egg lava", Description5: "(95.-) Baht net" },
+    { id: 6, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant butterfly pea lava.jpg", Name: "Croissant butterfly pea lava", Description6: "(85.-) Baht net" },
+    { id: 7, category: "EIFFEL BREAD", src: "/assets/BRADE1/Cranberry cream cheese croissant.jpg", Name: "Cranberry cream cheese croissant", Description7: "(115.-) Baht net" },
+    { id: 8, category: "EIFFEL BREAD", src: "/assets/BRADE1/Strawberry & Vanilla cream cube.jpg", Name: "Strawberry & Vanilla cream cube", Description7: "(145.-) Baht net" },
+    { id: 9, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant Passion fruit cheese cake.jpg", Name: "Croissant Passion fruit cheese cake", Description7: "(115.-) Baht net" },
+    { id: 10, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant mango coconut cream.jpg", Name: "Croissant mango coconut cream", Description7: "(105.-) baht net" },
+    { id: 11, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant cheese garlic.jpg", Name: "Croissant cheese garlic", Description7: "(95.-) Baht net" },
+    { id: 12, category: "EIFFEL BREAD", src: "/assets/BRADE1/Chocolate pistachio cruffin .jpg", Name: "Chocolate pistachio cruffin", Description7: "(105.-) baht net" },
 
-    { id: 13, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 13", Description13: "Description 13" },
-    { id: 14, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 14", Description14: "Description 14" },
-    { id: 15, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 15", Description15: "Description 15" },
-    { id: 16, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 16", Description16: "Description 16" },
-    { id: 17, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 17", Description17: "Description 17" },
-    { id: 18, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 18", Description18: "Description 18" },
-    { id: 19, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 19", Description19: "Description 19" },
-    { id: 20, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 20", Description20: "Description 20" },
-    { id: 21, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 21", Description21: "Description 21" },
-    { id: 22, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 22", Description22: "Description 22" },
-    { id: 23, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 23", Description23: "Description 23" },
-    { id: 24, category: "EIFFEL COFFEE", src: "/assets/TEST01/cr03.webp", Name: "COFFEE 24", Description24: "Description 24" },
 
-    { id: 25, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 25", Description25: "Description 25" },
-    { id: 26, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 26", Description26: "Description 26" },
-    { id: 27, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 27", Description27: "Description 27" },
-    { id: 28, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 28", Description28: "Description 28" },
-    { id: 29, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 29", Description29: "Description 29" },
-    { id: 30, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 30", Description30: "Description 30" },
-    { id: 31, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 31", Description31: "Description 31" },
-    { id: 32, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 32", Description32: "Description 32" },
-    { id: 33, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 33", Description33: "Description 33" },
-    { id: 34, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 34", Description34: "Description 34" },
-    { id: 35, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 35", Description35: "Description 35" },
-    { id: 36, category: "ORGANIC BEVERAGES", src: "/assets/TEST01/cr03.webp", Name: "BEVERAGES 36", Description36: "Description 36" },
+    { id: 13, category: "EIFFEL COFFEE", src: "/assets/Coffee/Ice coconut coffee.png", Name: "Ice coconut coffee", Description13: "Description 13" },
+    { id: 14, category: "EIFFEL COFFEE", src: "/assets/Coffee/Yuzu coffee.png", Name: "Yuzu coffee", Description14: "Description 14" },
+    { id: 15, category: "EIFFEL COFFEE", src: "/assets/Coffee/Ice coconut thai tea.jpg", Name: "Ice coconut thai tea", Description15: "(130.-) baht net" },
+    // { id: 16, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 16", Description16: "Description 16" },
+    // { id: 17, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 17", Description17: "Description 17" },
+    // { id: 18, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 18", Description18: "Description 18" },
+    // { id: 19, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 19", Description19: "Description 19" },
+    // { id: 20, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 20", Description20: "Description 20" },
+    // { id: 21, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 21", Description21: "Description 21" },
+    // { id: 22, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 22", Description22: "Description 22" },
+    // { id: 23, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 23", Description23: "Description 23" },
+    // { id: 24, category: "EIFFEL COFFEE", src: "/assets/Coffee/cr03.webp", Name: "COFFEE 24", Description24: "Description 24" },
 
-    { id: 37, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 37", Description37: "Description 37" },
-    { id: 38, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 38", Description38: "Description 38" },
-    { id: 39, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 39", Description39: "Description 39" },
-    { id: 40, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 40", Description40: "Description 40" },
-    { id: 41, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 41", Description41: "Description 41" },
-    { id: 42, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 42", Description42: "Description 42" },
-    { id: 43, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 43", Description43: "Description 43" },
-    { id: 44, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 44", Description44: "Description 44" },
-    { id: 45, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 45", Description45: "Description 45" },
-    { id: 46, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 46", Description46: "Description 46" },
-    { id: 47, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 47", Description47: "Description 47" },
-    { id: 48, category: "EIFFEL CAKE", src: "/assets/TEST01/cr03.webp", Name: "CAKE 48", Description48: "Description 48" },
+    { id: 25, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC9.jpg", Name: "ORGANIC BEBERAGES 25", Description25: "Description 25"},
+    { id: 26, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC2.jpg", Name: "ORGANIC BEBERAGES 26", Description26: "Description 26" },
+    { id: 27, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC3.jpg", Name: "ORGANIC BEBERAGES 27", Description27: "Description 27" },
+    { id: 28, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC5.jpg", Name: "ORGANIC BEBERAGES 28", Description28: "Description 28" },
+    { id: 29, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC6.jpg", Name: "ORGANIC BEBERAGES 29", Description29: "Description 29" },
+    { id: 30, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC7.jpg", Name: "ORGANIC BEBERAGES 30", Description30: "Description 30" },
+    { id: 31, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC8.jpg", Name: "ORGANIC BEBERAGES 31", Description31: "Description 31" },
+    { id: 32, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC14.jpg", Name: "ORGANIC BEBERAGES 32", Description32: "Description 32" },
 
-    { id: 49, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 49", Description49: "Description 49" },
-    { id: 50, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 50", Description50: "Description 50" },
-    { id: 51, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 51", Description51: "Description 51" },
-    { id: 52, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 52", Description52: "Description 52" },
-    { id: 53, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 53", Description53: "Description 53" },
-    { id: 54, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 54", Description54: "Description 54" },
-    { id: 55, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 55", Description55: "Description 55" },
-    { id: 56, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 56", Description56: "Description 56" },
-    { id: 57, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 57", Description57: "Description 57" },
-    { id: 58, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 58", Description58: "Description 58" },
-    { id: 59, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 59", Description59: "Description 59" },
-    { id: 60, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 60", Description60: "Description 60" },
+    { id: 37, category: "EIFFEL CAKE", src: "/assets/CAKE1/Chestnut salted egg mooncake.jpg", Name: "Chestnut salted egg mooncake", Description37: "(160.-) Baht net" },
+    { id: 38, category: "EIFFEL CAKE", src: "/assets/CAKE1/Sweet purple potato cake.jpg", Name: "Sweet purple potato cake.jpg ", Description38: "(140.-) Baht net" },
+    { id: 39, category: "EIFFEL CAKE", src: "/assets/CAKE1/Coconut jelly cake.jpg", Name: "Coconut jelly cake", Description39: "(160.-) Baht net" },
+    { id: 40, category: "EIFFEL CAKE", src: "/assets/CAKE1/Pandan coconut cake.jpg", Name: "Pandan coconut cake", Description40: "(120.-) Baht net" },
+    { id: 41, category: "EIFFEL CAKE", src: "/assets/CAKE1/Shine muscat cake.jpg", Name: "Shine muscat cake", Description41: "(140.-) Baht net" },
+    { id: 42, category: "EIFFEL CAKE", src: "/assets/CAKE1/Corn cheese cake.jpg", Name: "Corn cheese cake.jpg", Description42: "(120.-) Baht net" },
+    { id: 43, category: "EIFFEL CAKE", src: "/assets/CAKE1/Chocolate orange mousse.jpg", Name: "Chocolate orange mousse", Description43: "(150.-) Baht net" },
+    { id: 44, category: "EIFFEL CAKE", src: "/assets/CAKE1/Caramel sea salt banana cake.jpg", Name: "Caramel sea salt banana cake ", Description44: "Description 44" },
+    { id: 45, category: "EIFFEL CAKE", src: "/assets/CAKE1/Lod chong chiffon cake.jpg", Name: "Lod chong chiffon cake", Description45: "(140.-) Baht net" },
+    { id: 46, category: "EIFFEL CAKE", src: "/assets/CAKE1/Pina Colada mousse.jpg", Name: "Pina Colada mousse", Description46: "(150.-) Baht net" },
+    { id: 47, category: "EIFFEL CAKE", src: "/assets/CAKE1/Durian mousse cake.jpg", Name: "Durian mousse cake", Description47: "(195.-) Baht net" },
+    { id: 48, category: "EIFFEL CAKE", src: "/assets/CAKE1/Mango sticky rice short cake.jpg", Name: "Mango sticky rice short cake", Description48: "(140.-) Baht net" },
 
-    { id: 61, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 61", Description61: "Description 61" },
-    { id: 62, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 62", Description62: "Description 62" },
-    { id: 63, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 63", Description63: "Description 63" },
-    { id: 64, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 64", Description64: "Description 64" },
-    { id: 65, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 65", Description65: "Description 65" },
-    { id: 66, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 66", Description66: "Description 66" },
-    { id: 67, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 67", Description67: "Description 67" },
-    { id: 68, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 68", Description68: "Description 68" },
-    { id: 69, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 69", Description69: "Description 69" },
-    { id: 70, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 70", Description70: "Description 70" },
-    { id: 71, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 71", Description71: "Description 71" },
-    { id: 72, category: "OUR CAFÉ", src: "/assets/TEST01/cr03.webp", Name: "OUR CAFÉ 72", Description72: "Description 72" },
+    // { id: 49, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 49", Description49: "Description 49" },
+    // { id: 50, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 50", Description50: "Description 50" },
+    // { id: 51, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 51", Description51: "Description 51" },
+    // { id: 52, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 52", Description52: "Description 52" },
+    // { id: 53, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 53", Description53: "Description 53" },
+    // { id: 54, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 54", Description54: "Description 54" },
+    // { id: 55, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 55", Description55: "Description 55" },
+    // { id: 56, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 56", Description56: "Description 56" },
+    // { id: 57, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 57", Description57: "Description 57" },
+    // { id: 58, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 58", Description58: "Description 58" },
+    // { id: 59, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 59", Description59: "Description 59" },
+    // { id: 60, category: "WEEKEND MENU", src: "/assets/TEST01/cr03.webp", Name: "WEEKEND MENU 60", Description60: "Description 60" },
 
-    { id: 73, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 73", Description73: "Description 73" },
-    { id: 74, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 74", Description74: "Description 74" },
-    { id: 75, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 75", Description75: "Description 75" },
-    { id: 76, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 76", Description76: "Description 76" },
-    { id: 77, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 77", Description77: "Description 77" },
-    { id: 78, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 78", Description78: "Description 78" },
-    { id: 79, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 79", Description79: "Description 79" },
-    { id: 80, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 80", Description80: "Description 80" },
-    { id: 81, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 81", Description81: "Description 81" },
-    { id: 82, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 82", Description82: "Description 82" },
-    { id: 83, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 83", Description83: "Description 83" },
-    { id: 84, category: "SEASON’S BAKERY", src: "/assets/TEST01/cr03.webp", Name: "SEASON’S BAKERY 84", Description84: "Description 84" },
-  ];
+    { id: 61, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe1.jpg", Name: "OUR CAFÉ 61", Description61: "Description 61" },
+    { id: 63, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe2.jpg", Name: "OUR CAFÉ 63", Description63: "Description 63" },
+    { id: 64, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe3.jpg", Name: "OUR CAFÉ 64", Description64: "Description 64" },
+    { id: 65, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe4.jpg", Name: "OUR CAFÉ 65", Description65: "Description 65" },
+    { id: 66, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe5.jpg", Name: "OUR CAFÉ 66", Description66: "Description 66" },
+    { id: 67, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe6.jpg", Name: "OUR CAFÉ 67", Description67: "Description 67" },
+    { id: 68, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe7.jpg", Name: "OUR CAFÉ 68", Description68: "Description 68" },
+    { id: 69, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe8.jpg", Name: "OUR CAFÉ 69", Description69: "Description 69" },
+    { id: 70, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe9.jpg", Name: "OUR CAFÉ 70", Description70: "Description 70" },
+    { id: 71, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe10.jpg", Name: "OUR CAFÉ 71", Description71: "Description 71" },
 
+
+    { id: 73, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/BREAD 3.jpg", Name: "SEASON’S BAKERY 73", Description73: "Description 73" },
+    { id: 74, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/BREAD 4.jpg", Name: "SEASON’S BAKERY 74", Description74: "Description 74" },
+    { id: 75, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/BREAD 5.jpg", Name: "SEASON’S BAKERY 75", Description75: "Description 75" },
+    { id: 76, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/cake2.jpg", Name: "SEASON’S BAKERY 76", Description76: "Description 76" },
+    { id: 77, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/cake3.jpg", Name: "SEASON’S BAKERY 77", Description77: "Description 77" },
+    { id: 78, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/cake7.jpg", Name: "SEASON’S BAKERY 78", Description78: "Description 78" },
+  ]
   const itemproduct = [
     { id: 1, src: "/assets/Product/crproduct.jpg", alt: "Product 1" },
     { id: 2, src: "/assets/Product/crproduct2.jpg", alt: "Product 2" },
@@ -162,7 +151,6 @@ const Ourproduct = () => {
           </div>
         </section>
 
-
         {/* Hero Image Section */}
         <section className="container mx-auto flex justify-center items-center min-h-[300px] md:min-h-[500px] lg:min-h-[600px]">
           <div
@@ -215,27 +203,32 @@ const Ourproduct = () => {
         {/* Product Items */}
         <section>
           <div className="container mx-auto">
-            <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-4 max-w-[1090px] 
-            mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
-              }`}>
+            <div
+              className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-4 max-w-[1090px] 
+              mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
+                }`}
+            >
               {filteredItems.map((item) => (
                 <div
                   key={item.id}
                   className="relative bg-white rounded-lg shadow-lg overflow-hidden group transition-opacity duration-500 ease-in-out"
                 >
-                  <div className="aspect-w-1 aspect-h-1">
+                  <div className="w-full h-[300px]">
+                    {/* กำหนดขนาดที่แน่นอน */}
                     <Image
                       src={item.src}
                       alt={item.Name}
-                      width={600}
-                      height={600}
+                      width={2000}
+                      height={2000}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col items-center justify-center 
-                  opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300">
-                    <p className="text-white text-lg md:text-xl font-semibold">
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-0 flex flex-col items-center justify-center 
+                    opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300"
+                  >
+                    <p className="text-white text-center text-lg md:text-xl font-semibold">
                       {item.Name}
                     </p>
                     <div>

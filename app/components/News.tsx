@@ -8,65 +8,67 @@ import Image from "next/image";
 const NewFeel = [
   {
     id: 1,
-    image: "/assets/Christmas/Matcha.jpg",
-    name: "Matcha Coconut Raspberry X mas tree",
-    description1: "185 Baht net",
-    description2: "Indulge in the sweet and fragrant green tea white chocolate mousse that melts in your mouth 🍃 Hidden deliciousness with raspberry and cream cheese filling, topped with crispy pistachio cake, designed like a Christmas tree, guaranteed to be delicious and bright to welcome the festival! 💚",
+    image: "/assets/News/Festive/Festive Gift Box.jpg",
+    name: "Festive Gift Box",
+    description1: "1,090 Baht net",
+    description2: "(Palmier Box, Hazelnut Bonbon, Madeleine, Pocko Choc Pistachio) Experience the finest treats with a premium selection, including Palmier Box, Hazelnut Bonbon, Madeleine, and Pocko Choc Pistachio, all packed together for you to enjoy in one box!",
   },
   {
     id: 2,
-    image: "/assets/Christmas/Ras.jpg",
+    image: "/assets/News/Ras/Ras.jpg",
     name: "Raspberry cream White Choc croissant",
     description1: "145 Baht net",
-    description2: "Bright red Santa croissants with a cute fondant belt like Santa's belly. The filling is a soft and smooth white chocolate creamer, cut with a sour taste from raspberry jam. Perfectly balanced. 🎁",
+    description2: "Bright red cubic croissant in Santa style, with a cute fondant belt resembling Santa's belly. Filled with smooth white chocolate cream, complemented by the tartness of raspberry jam - perfectly balanced.",
   },
   {
     id: 3,
-    image: "/assets/Christmas/Whitemalt.jpg",
-    name: "Whitemalt Choc Hazelnut Reindeer",
+    image: "/assets/News/Gana/Whitemalt.jpg",
+    name: " Whitemalt Choc Hazelnut Reindeer",
     description1: "185 Baht net",
-    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+    description2: "Experience the delicate white malt mousse with smooth chocolate ganache filling, layered with crispy feuilletine and hazelnut praline - a delightful bite full of flavor",
   },
   {
     id: 4,
-    image: "/assets/Christmas/Whitemalt.jpg",
-    name: "Whitemalt Choc Hazelnut Reindeer",
+    image: "/assets/News/Mat/Matcha.jpg",
+    name: "Matcha Coconut Raspberry X mas tree",
     description1: "185 Baht net",
-    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+    description2: "Indulge in sweet-scented white chocolate green tea mousse that melts in your mouth, with hidden deliciousness of raspberry and cream cheese filling, enhanced by crispy pistachio cake. Uniquely designed like a Christmas tree - guaranteed to bring delicious festive cheer!",
   },
   {
     id: 5,
-    image: "/assets/Christmas/Whitemalt.jpg",
-    name: "Whitemalt Choc Hazelnut Reindeer",
-    description1: "185 Baht net",
-    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+    image: "/assets/News/Yuzu/Yuzu1.jpg",
+    name: "Coffee Yuzu Santa",
+    description1: "175 Baht net",
+    description2: "Intense coffee yuzu mousse blended with the refreshing tang of sweet and sour yuzu orange jam, complemented by a crispy crunch of almond feuilletine. A perfect bite of delightful flavors!",
   },
   {
     id: 6,
-    image: "/assets/Christmas/Whitemalt.jpg",
-    name: "Whitemalt Choc Hazelnut Reindeer",
-    description1: "185 Baht net",
-    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+    image: "/assets/News/White/White1.jpg",
+    name: "White Choc Cointreau croissant",
+    description1: "145 Baht net",
+    description2: "The White Chocolate and Cointreau Croissant is back! Perfect for the festive season, it offers a delightful blend of sweet and creamy flavors. Served in a log-shaped design, it’s elegantly decorated with white chocolate and snowy white dust, making it a stunning treat to celebrate Christmas.",
   },
   {
     id: 7,
-    image: "/assets/Christmas/Whitemalt.jpg",
-    name: "Whitemalt Choc Hazelnut Reindeer",
-    description1: "185 Baht net",
-    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
-  },
-  {
-    id: 8,
-    image: "/assets/Christmas/Whitemalt.jpg",
-    name: "Whitemalt Choc Hazelnut Reindeer",
-    description1: "185 Baht net",
-    description2: "Experience the soft and smooth white malt mousse with a smooth chocolate ganache filling, with the crunchiness of fetaine sheets and hazelnut praline – delicious and satisfying! 😍",
+    image: "/assets/News/Berry/BerryLogcake.png",
+    name: "Berry Log cake",
+    description1: "175 Baht net",
+    description2: "Soft vanilla cake filled with tangy-sweet berry jam, complemented by the smooth aroma of vanilla pastry cream. Enhanced with rich brown butter milk chocolate ganache, offering a perfect balance of sweet and slightly bitter flavors in every bite!",
   },
 ];
 
 const News = () => {
   const [isVisible, setIsVisible] = useState(false);
 
+  /**
+   * Applies a fade-in effect to the component after a short delay.
+   *
+   * This effect is used to create a smooth transition when the component becomes visible.
+   * It sets the `isVisible` state to `true` after a 10 millisecond delay, causing the component
+   * to fade in.
+   *
+   * The effect is cleaned up by clearing the timeout when the component is unmounted.
+   */
   useEffect(() => {
     // เริ่มใช้ fade-in ก่อน 0.10 seconds
     const timer = setTimeout(() => {
