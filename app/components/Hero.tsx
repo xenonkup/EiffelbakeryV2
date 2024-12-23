@@ -49,7 +49,7 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full px-3 sm:px-3 lg:px-3">
         <div
           className={`
             flex flex-col items-center justify-center text-center
@@ -62,7 +62,7 @@ const Hero = () => {
           <h1
             className={`
               font-bold
-              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+              text-3xl sm:text-5xl md:text-5xl lg:text-7xl
               tracking-tight
               transition-all duration-[1500ms] delay-300 ease-in-out
               max-w-[90%] sm:max-w-4xl
