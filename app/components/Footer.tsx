@@ -1,12 +1,17 @@
-import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaLine } from 'react-icons/fa';
-
+import Image from "next/image";
+import { FaFacebook, FaInstagram, FaLine } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 w-full bg-white text-black p-6">
-      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-4 px-6 md:px-10">
+    <footer className="bg-white text-black p-6">
+      
+      {/* เส้น Border ด้านบน */}
+      <div className="w-full">
+        <div className="border-t border-gray-300 w-full max-w-screen-2xl mx-auto pb-5"></div>
+      </div>
 
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-4 px-6 md:px-10">
+        
         {/* Left Section */}
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
           <p className="sm:inline-block">More channels to contact us</p>
@@ -23,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Section - Styled Similar to Example */}
+        {/* Right Section */}
         <div className="flex items-center justify-center sm:justify-end gap-2">
           {/* โลโก้ */}
           <a href="" className="flex items-center">
@@ -32,12 +37,12 @@ const Footer = () => {
               alt="Logo"
               width={100}
               height={100}
-              className="hidden sm:block" // ซ่อนโลโก้เมื่ออยู่ในจอขนาดเล็ก
+              className="hidden sm:block"
             />
           </a>
 
           {/* เส้นคั่น */}
-          <div className="w-px h-4 bg-gray-300 hidden sm:block"></div> {/* ซ่อนเส้นคั่นในจอเล็ก */}
+          <div className="w-px h-4 bg-gray-300 hidden sm:block"></div>
 
           {/* ข้อความลิขสิทธิ์ */}
           <p className="text-sm text-gray-600 text-center sm:text-left">

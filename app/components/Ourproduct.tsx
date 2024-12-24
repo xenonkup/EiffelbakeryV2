@@ -179,11 +179,10 @@ const Ourproduct = () => {
         </section>
 
         {/* Product Items */}
-        {/* Product Items */}
         <section>
           <div className="container mx-auto">
             <div
-              className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-[1090px] 
+              className={`grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-4 max-w-[1090px] 
       mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             >
               {filteredItems.map((item) => (
@@ -191,25 +190,25 @@ const Ourproduct = () => {
                   key={item.id}
                   className="relative bg-white rounded-lg shadow-lg overflow-hidden group transition-opacity duration-500 ease-in-out"
                 >
-                  <div className="w-full h-[200px] xs:h-[250px] sm:h-[280px] md:h-[300px]">
+                  <div className="w-full h-[150px] sm:h-[220px] md:h-[260px] lg:h-[300px]">
                     <Image
                       src={item.src}
                       alt={item.Name}
-                      width={800}
-                      height={800}
+                      width={2000}
+                      height={2000}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div
                     className="absolute inset-0 bg-black bg-opacity-0 flex flex-col items-center justify-center 
-            opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-4"
+                    opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300"
                   >
                     <p className="text-white text-center text-sm sm:text-base md:text-lg lg:text-xl font-semibold px-2">
                       {item.Name}
                     </p>
                     <div>
-                      <p className="text-white text-xs sm:text-sm md:text-base mt-1 text-center">
+                      <p className="text-white text-xs sm:text-sm md:text-base mt-1 text-center px-2">
                         {Object.entries(item)
                           .filter(([key]) => key.startsWith('Description'))
                           .map(([_, value]) => value)}
