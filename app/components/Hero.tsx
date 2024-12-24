@@ -61,11 +61,11 @@ const Hero = () => {
           {/* Title */}
           <h1
             className={`
-              font-bold
-              text-3xl sm:text-5xl md:text-5xl lg:text-7xl
+              font-semibold
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
               tracking-tight
               transition-all duration-[1500ms] delay-300 ease-in-out
-              max-w-[90%] sm:max-w-4xl
+              max-w-[100%] sm:max-w-7xl
               leading-tight
             `}
           >

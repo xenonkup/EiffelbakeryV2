@@ -17,7 +17,7 @@ const Ourproduct = () => {
   const items = [
     { id: 1, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant truffle.jpg", Name: "Croissant truffle" },
     { id: 2, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant lemon meringue.jpg", Name: "Croissant lemon meringue" },
-    { id: 3, category: "EIFFEL BREAD", src: "/assets/BRADE1/Pain suisse au choc chips.jpg", Name: "Pain suisse au choc chips.jpg" },
+    { id: 3, category: "EIFFEL BREAD", src: "/assets/BRADE1/Pain suisse au choc chips.jpg", Name: "Pain suisse au choc chips" },
     { id: 4, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant chocolate lava.jpg", Name: "Croissant chocolate lava" },
     { id: 5, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant egg lava.jpg", Name: "Croissant egg lava" },
     { id: 6, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant butterfly pea lava.jpg", Name: "Croissant butterfly pea lava" },
