@@ -84,26 +84,48 @@ const News = () => {
         </div>
 
         {/* Swiper Section */}
-        <div className="relative w-full ">
+        <div className="relative w-full">
           <Swiper
             spaceBetween={10}
             slidesPerView={4}
             breakpoints={{
-              0: { slidesPerView: 1 },
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              0: {
+                slidesPerView: 2,
+                spaceBetween: 5,
+                // ขนาดของการ์ดเมื่อเหลือ 1 รูป
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+                // ขนาดของการ์ดเมื่อมี 2 รูป
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                // ขนาดของการ์ดเมื่อมี 3 รูป
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 12,
+                // ขนาดของการ์ดเมื่อมี 3 รูป
+              },
+              1280: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                // ขนาดของการ์ดเมื่อมี 3 รูป
+              },
             }}
             navigation={{
               prevEl: ".custom-prev",
               nextEl: ".custom-next",
             }}
             modules={[Navigation]}
-            className="py-4"
+            className="py-4 w-full"
           >
             {NewFeel.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="bg-[#292929] rounded-lg overflow-hidden h-full flex flex-col shadow-lg">
+                {/* Card Container */}
+                <div className="bg-[#292929] rounded-lg overflow-hidden flex flex-col shadow-lg">
                   {/* Image Container */}
                   <div className="relative w-full aspect-square">
                     <Image

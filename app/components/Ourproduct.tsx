@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 const Ourproduct = () => {
   // Categories and Items
@@ -8,11 +9,9 @@ const Ourproduct = () => {
     { id: 2, name: "EIFFEL COFFEE" },
     { id: 3, name: "ORGANIC BEBERAGES" },
     { id: 4, name: "EIFFEL CAKE" },
-    // { id: 5, name: "WEEKEND MENU" },
-    { id: 6, name: "SEASON’S BAKERY" },
-    { id: 7, name: "OUR CAFÉ" },
+    { id: 5, name: "SEASON’S BAKERY" },
+    { id: 6, name: "OUR CAFÉ" },
   ];
-
   // Item Images
   const items = [
     { id: 1, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant truffle.jpg", Name: "Croissant truffle" },
@@ -27,12 +26,9 @@ const Ourproduct = () => {
     { id: 10, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant mango coconut cream.jpg", Name: "Croissant mango coconut cream" },
     { id: 11, category: "EIFFEL BREAD", src: "/assets/BRADE1/Croissant cheese garlic.jpg", Name: "Croissant cheese garlic" },
     { id: 12, category: "EIFFEL BREAD", src: "/assets/BRADE1/Chocolate pistachio cruffin .jpg", Name: "Chocolate pistachio cruffin" },
-
-
     { id: 13, category: "EIFFEL COFFEE", src: "/assets/Coffee/Ice coconut coffee.png", Name: "Ice coconut coffee" },
     { id: 14, category: "EIFFEL COFFEE", src: "/assets/Coffee/Yuzu coffee.png", Name: "Yuzu coffee" },
     { id: 15, category: "EIFFEL COFFEE", src: "/assets/Coffee/Ice coconut thai tea.jpg", Name: "Ice coconut thai tea" },
-
     { id: 25, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC9.jpg", Name: "ORGANIC BEBERAGES 25", },
     { id: 26, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC2.jpg", Name: "ORGANIC BEBERAGES 26", },
     { id: 27, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC3.jpg", Name: "ORGANIC BEBERAGES 27", },
@@ -41,7 +37,6 @@ const Ourproduct = () => {
     { id: 30, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC7.jpg", Name: "ORGANIC BEBERAGES 30", },
     { id: 31, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC8.jpg", Name: "ORGANIC BEBERAGES 31", },
     { id: 32, category: "ORGANIC BEBERAGES", src: "/assets/ORGANIC BEBERAGES/ORGANIC14.jpg", Name: "ORGANIC BEBERAGES 32", },
-
     { id: 37, category: "EIFFEL CAKE", src: "/assets/CAKE1/Chestnut salted egg mooncake.jpg", Name: "Chestnut salted egg mooncake" },
     { id: 38, category: "EIFFEL CAKE", src: "/assets/CAKE1/Sweet purple potato cake.jpg", Name: "Sweet purple potato cake.jpg " },
     { id: 39, category: "EIFFEL CAKE", src: "/assets/CAKE1/Coconut jelly cake.jpg", Name: "Coconut jelly cake" },
@@ -54,7 +49,6 @@ const Ourproduct = () => {
     { id: 46, category: "EIFFEL CAKE", src: "/assets/CAKE1/Pina Colada mousse.jpg", Name: "Pina Colada mousse" },
     { id: 47, category: "EIFFEL CAKE", src: "/assets/CAKE1/Durian mousse cake.jpg", Name: "Durian mousse cake" },
     { id: 48, category: "EIFFEL CAKE", src: "/assets/CAKE1/Mango sticky rice short cake.jpg", Name: "Mango sticky rice short cake" },
-
     { id: 61, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe1.jpg", Name: "OUR CAFÉ 61", },
     { id: 63, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe2.jpg", Name: "OUR CAFÉ 63", },
     { id: 64, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe3.jpg", Name: "OUR CAFÉ 64", },
@@ -65,8 +59,6 @@ const Ourproduct = () => {
     { id: 69, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe8.jpg", Name: "OUR CAFÉ 69", },
     { id: 70, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe9.jpg", Name: "OUR CAFÉ 70", },
     { id: 71, category: "OUR CAFÉ", src: "/assets/Ourcafe/cafe10.jpg", Name: "OUR CAFÉ 71", },
-
-
     { id: 73, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/BREAD 3.jpg", Name: "SEASON’S BAKERY 73", },
     { id: 74, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/BREAD 4.jpg", Name: "SEASON’S BAKERY 74", },
     { id: 75, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/BREAD 5.jpg", Name: "SEASON’S BAKERY 75", },
@@ -74,6 +66,7 @@ const Ourproduct = () => {
     { id: 77, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/cake3.jpg", Name: "SEASON’S BAKERY 77", },
     { id: 78, category: "SEASON’S BAKERY", src: "/assets/SEASON'S BAKERY/cake7.jpg", Name: "SEASON’S BAKERY 78", },
   ]
+
   const itemproduct = [
     { id: 1, src: "/assets/Product/crproduct.jpg", alt: "Product 1" },
     { id: 2, src: "/assets/Product/crproduct2.jpg", alt: "Product 2" },
@@ -110,6 +103,20 @@ const Ourproduct = () => {
     }, 400); // Duration of fade-out effect
   };
 
+  useEffect(() => {
+    import("@fancyapps/ui").then(({ Fancybox }) => {
+      Fancybox.bind("[data-fancybox='gallery']", {
+        Thumbs: {
+          type: "modern",
+        },
+      });
+  
+      return () => {
+        Fancybox.destroy();
+      };
+    });
+  }, []);
+  
   return (
     <>
       <main className="bg-white pt-20 md:pt-24 px-6 md:px-10">
@@ -178,46 +185,35 @@ const Ourproduct = () => {
           </div>
         </section>
 
-        {/* Product Items */}
+        {/* Product Items Section */}
         <section>
           <div className="container mx-auto">
-            <div
-              className={`grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-3 max-w-[1090px] 
-              mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-            >
+            <div className={`grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-3 max-w-[1090px] mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
               {filteredItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="relative bg-white rounded-lg shadow-lg overflow-hidden group transition-opacity duration-500 ease-in-out"
-                >
-                  <div className="w-full h-[150px] sm:h-[220px] md:h-[260px] lg:h-[300px]">
-                    <Image
-                      src={item.src}
-                      alt={item.Name}
-                      width={2000}
-                      height={2000}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+                <div key={item.id} className="relative bg-white rounded-lg shadow-lg overflow-hidden group transition-opacity duration-500 ease-in-out">
+                  <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px]">
+                    <a
+                      href={item.src}
+                      data-fancybox="gallery"
+                      data-caption={item.Name}
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.Name}
+                        width={2000}
+                        height={2000}
+                        className="w-full h-full object-cover"
+                      />
+                    </a>
                   </div>
-                  <div
-                    className="absolute inset-0 bg-black bg-opacity-0 flex flex-col items-center justify-center 
-                    opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300"
-                  >
+                  {/* <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col items-center justify-center opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300">
                     <p className="text-white text-center text-sm sm:text-base md:text-lg lg:text-xl font-semibold px-2">
                       {item.Name}
                     </p>
-                    <div>
-                      <p className="text-white text-xs sm:text-sm md:text-base mt-1 text-center px-2">
-                        {Object.entries(item)
-                          .filter(([key]) => key.startsWith('Description'))
-                          .map(([_, value]) => value)}
-                      </p>
-                    </div>
-                  </div>
+                  </div> */}
                 </div>
-              ))}
-            </div>
+              ))}            
+              </div>
           </div>
         </section>
 

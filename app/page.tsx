@@ -28,13 +28,14 @@ const Page = () => {
   return (
 
     <div className={`${roboto.className}`}>
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <About />
-      <News />
+      <News /> */}
       <Ourproduct />
-      <Contact />
-      <Footer/>
+      {/* <Contact />
+      <Footer/> */}
+
     </div>
   );
 };
