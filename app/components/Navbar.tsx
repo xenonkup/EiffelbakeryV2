@@ -1,3 +1,4 @@
+import { p } from "framer-motion/client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -133,7 +134,13 @@ const Navbar = () => {
 
             {/* Close Button */}
             <div className="flex justify-between items-center p-6 border-b">
-              <p className="text-2xl font-medium text-black ">Eiffelbakery</p>
+              <Image
+                src="/assets/Logo/Eiffel.jpg"
+                alt="Eiffelbakery Logo"
+                width={1000}
+                height={1000}
+                className="w-[100px] h-[70px]"
+              />              
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 focus:outline-none transition-all duration-300"
@@ -166,7 +173,7 @@ const Navbar = () => {
                   <a
                     href={item.href}
                     className="block text-left text-lg font-medium text-black uppercase rounded-lg hover:bg-black/90
-                    hover:text-white transition-all duration-300 px-4 py-2 w-full"
+                    hover:text-white transition-all duration-300 px-1 py-1 w-full"
                     onClick={toggleMenu}
                   >
                     {item.name}

@@ -206,11 +206,13 @@ const Ourproduct = () => {
                       />
                     </a>
                   </div>
-                  {/* <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col items-center justify-center opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300">
+                  {/* 
+                  <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col items-center justify-center opacity-0 group-hover:bg-opacity-70 group-hover:opacity-100 transition-all duration-300">
                     <p className="text-white text-center text-sm sm:text-base md:text-lg lg:text-xl font-semibold px-2">
                       {item.Name}
                     </p>
-                  </div> */}
+                  </div> 
+                  */}
                 </div>
               ))}            
               </div>
