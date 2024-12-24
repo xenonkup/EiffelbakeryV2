@@ -60,15 +60,6 @@ const NewFeel = [
 const News = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  /**
-   * Applies a fade-in effect to the component after a short delay.
-   *
-   * This effect is used to create a smooth transition when the component becomes visible.
-   * It sets the `isVisible` state to `true` after a 10 millisecond delay, causing the component
-   * to fade in.
-   *
-   * The effect is cleaned up by clearing the timeout when the component is unmounted.
-   */
   useEffect(() => {
     // เริ่มใช้ fade-in ก่อน 0.10 seconds
     const timer = setTimeout(() => {
@@ -79,8 +70,8 @@ const News = () => {
   }, []);
 
   return (
-    <section id="News" className={`bg-[#171614] py-6 px-6 md:py-6 lg:py-6 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <div className="container max-w-[1100px] mx-auto py-1 px-1 md:py-1 lg:py-1 ">
+    <section id="News" className={`bg-[#171614] py-20 md:py-24 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="container max-w-[1100px] mx-auto px-6 md:px-10  ">
         {/* Title Section */}
         <div className="text-center text-white mb-4 md:mb-8">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4">
