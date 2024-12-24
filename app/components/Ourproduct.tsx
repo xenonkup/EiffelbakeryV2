@@ -182,8 +182,8 @@ const Ourproduct = () => {
         <section>
           <div className="container mx-auto">
             <div
-              className={`grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-4 max-w-[1090px] 
-      mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              className={`grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-3 max-w-[1090px] 
+              mx-auto transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             >
               {filteredItems.map((item) => (
                 <div
