@@ -74,45 +74,34 @@ const News = () => {
       <div className="container max-w-[1100px] mx-auto px-6 md:px-10  ">
         {/* Title Section */}
         <div className="text-center text-white mb-4 md:mb-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             News
           </h2>
-          <p className="text-sm md:text-base max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-sm md:text-base max-w-2xl mx-auto px-4">
             Cafe Eiffel offers authentic French bakery and pastry made with premium ingredients.
             Freshly baked from the oven every day.
           </p>
         </div>
 
         {/* Swiper Section */}
-        <div className="relative w-full">
+        <div className="relative w-full items-center justify-center mx-auto">
           <Swiper
-            spaceBetween={10}
-            slidesPerView={4}
             breakpoints={{
-              0: {
-                slidesPerView: 2,
-                spaceBetween: 5,
-                // ขนาดของการ์ดเมื่อเหลือ 1 รูป
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 8,
-                // ขนาดของการ์ดเมื่อมี 2 รูป
+              672: {
+                slidesPerView: 1,
+                width: 630, // Tablet screens
               },
               768: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-                // ขนาดของการ์ดเมื่อมี 3 รูป
+                slidesPerView: 2,
+                width: 700, // Larger tablets
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 12,
-                // ขนาดของการ์ดเมื่อมี 3 รูป
+                width: 1040, // Small desktops
               },
               1280: {
                 slidesPerView: 3,
-                spaceBetween: 10,
-                // ขนาดของการ์ดเมื่อมี 3 รูป
+                width: 1040, // Large desktops
               },
             }}
             navigation={{
@@ -125,9 +114,9 @@ const News = () => {
             {NewFeel.map((item) => (
               <SwiperSlide key={item.id}>
                 {/* Card Container */}
-                <div className="bg-[#292929] rounded-lg overflow-hidden flex flex-col shadow-lg">
+                <div className="bg-[#292929] rounded-lg overflow-hidden flex flex-col shadow-lg w-[250px] h-[450px] mx-auto">
                   {/* Image Container */}
-                  <div className="relative w-full aspect-square">
+                  <div className="relative w-full h-[300px]">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -136,7 +125,6 @@ const News = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-
                   {/* Content Container */}
                   <div className="p-4 md:p-6 flex flex-col">
                     <h3 className="text-sm md:text-base font-semibold text-white mb-2 line-clamp-2 min-h-[2.5rem]">
@@ -157,7 +145,7 @@ const News = () => {
           {/* Custom Navigation Buttons */}
           <div className="hidden lg:block">
             <button
-              className="custom-prev absolute top-1/2 -left-16 transform -translate-y-1/2 z-10 
+              className="custom-prev absolute top-1/2 -left-12 transform -translate-y-1/2 z-10 
                 text-white transition-colors duration-300 focus:outline-none"
             >
               <svg
@@ -175,7 +163,7 @@ const News = () => {
               </svg>
             </button>
             <button
-              className="custom-next absolute top-1/2 -right-16 transform -translate-y-1/2 z-10 
+              className="custom-next absolute top-1/2 -right-12 transform -translate-y-1/2 z-10 
                 text-white transition-colors duration-300 focus:outline-none"
             >
               <svg
@@ -195,8 +183,7 @@ const News = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
-
 export default News;
